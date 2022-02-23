@@ -1,0 +1,114 @@
+ns-flat-tree {
+  margin-bottom: 15px;
+
+  .mat-form-field-wrapper {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  mat-label {
+    max-width: 140px !important;
+  }
+
+  .tree-area {
+    border: 1px solid #E9E9E9;
+    border-radius: 12px;
+
+    .choose-area {
+      padding: 20px !important;
+      border-right: 1px solid #E9E9E9;
+
+      .hideChooseNode {
+        display: none !important;
+      }
+
+      .header-choose-area {
+        .title-choose-tree {
+          width: 0;
+        }
+      }
+    }
+
+    .selected-area {
+      padding: 20px !important;
+
+      .hideSelectedNode {
+        display: none !important;
+      }
+
+      .header-area {
+        display: flex;
+        place-content: space-between;
+        align-items: center;
+        height: 48px;
+
+        label {
+          font-weight: bold;
+        }
+
+        .collapse-expand-all {
+          font-size: 18px;
+          font-weight: 500;
+          color: #00977D;
+        }
+      }
+
+      .mat-tree-node {
+        line-height: 48px;
+      }
+
+      cdk-virtual-scroll-viewport {
+        position: initial;
+        contain: initial;
+        transform: initial;
+
+        .cdk-virtual-scroll-content-wrapper {
+          position: initial;
+        }
+      }
+    }
+  }
+
+  div {
+    .required-label-outside {
+      color: red;
+    }
+
+    .isClickDiv:hover {
+      cursor: pointer;
+    }
+
+    .collapse-expand-all:hover {
+      cursor: pointer;
+    }
+  }
+
+  mat-hint {
+    color: red;
+  }
+
+  &.view_detail {
+    .ns-flat-tree {
+      display: block !important;
+
+      mat-label {
+        .label {
+          font-weight: bold;
+          height: auto;
+          margin-bottom: 8px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+
+
+
+    cdk-virtual-scroll-viewport {
+      height: 140px !important;
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+<div class="dialog_wrapper">
+  <div class="dialog_header">
+    <div class="dialog_title">{{title | translate}}</div>
+  </div>
+  <div class="dialog_content padding-20">
+    <form [formGroup]="addEditForm">
+      <mat-grid-list cols="1" rowHeight="85px">
+        <mat-grid-tile>
+          <div class="text-inside">
+            <ns-multi-select-autocomplete formControlName="clientId"
+                                          [formGroup]="addEditForm"
+                                          placeholder="{{'permission.management.modal.clientId'}}"
+                                          [multiple]="false"
+                                          [required]="true"
+                                          [options]="options"
+            ></ns-multi-select-autocomplete>
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <div class="text-inside">
+            <mat-form-field>
+              <input matInput placeholder="{{'permission.management.modal.url'|translate}}" formControlName="url" required>
+              <mat-error *ngIf="addEditForm?.controls.url.hasError('required')">
+                {{'permission.management.modal.url.empty'|translate}}
+              </mat-error>
+
+            </mat-form-field>
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <div class="text-inside">
+            <mat-form-field>
+              <input matInput placeholder="{{'permission.management.modal.description'| translate}}"
+                     formControlName="description">
+
+            </mat-form-field>
+
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </form>
+  </div>
+  <div class="dialog_footer center">
+    <div>
+      <button mat-button type="submit" class="primary" (click)="onSubmit()" [disabled]="!!addEditForm?.invalid">{{'btnAddEdit'|translate}}</button>
+    </div>
+  </div>
+</div>
+

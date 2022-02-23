@@ -1,0 +1,40 @@
+<form class="acbox" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+  <div fxLayout="row wrap" class="row-wrap-padding">
+    <div class="form_title">{{'permission.management' | translate }}</div>
+    <ns-input formControlName="text"
+              [isLabelOutside]="true"
+              [formGroup]="searchForm"
+              [placeholder]="'permission.management.search'"
+              fxLayout="column" fxFlex="60%" fxFlex.lt-md="100%">
+    </ns-input>
+    <ns-multi-select-autocomplete formControlName="client"
+                                  [isLabelOutside]="true"
+                                  [formGroup]="searchForm"
+                                  [options]="clientOptions"
+                                  (selectionChange)="filterPermissionByClientId()"
+                                  [multiple]="false"
+                                  [placeholder]="'menu.management.table.clientId'"
+                                  fxLayout="column" fxFlex="40%" fxFlex.lt-md="100%">
+    </ns-multi-select-autocomplete>
+    <div fxLayout="column" fxFlex="100%">
+      <div class="buttonArea left">
+        <button mat-button type="submit" class="primary">
+          <i class="fa fa-search"></i> {{'btnSearch'|translate}}
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
+<div class="result_section">
+  <h3>{{paging.totalElements}} {{('common.results'| translate)}}</h3>
+</div>
+<div class="acbox">
+  <ns-table [columns]="columns"
+            [buttons]="buttons"
+            [paging]="paging"
+            (pagingChange)="pagingChange($event)"
+            [moduleName]="moduleName"
+            [results]="results"
+            (clickAction)="onRowButtonClick($event)">
+  </ns-table>
+</div>

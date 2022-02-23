@@ -1,0 +1,4 @@
+export enum IconTypeEnum {
+    MATERIAL_ICON='MATERIAL_ICON',
+    FONT_AWESOME='FONT_AWESOME'
+}

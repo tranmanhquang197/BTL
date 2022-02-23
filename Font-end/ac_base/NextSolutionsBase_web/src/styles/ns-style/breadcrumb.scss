@@ -1,0 +1,38 @@
+.breadcrumb {
+  margin: 0;
+  display: flex;
+  height: 2rem;
+  align-items: center;
+
+  .breadcrumbList {
+    margin-left: -1.5rem;
+
+    li {
+      display: inline;
+
+      &:first-child {
+        display: none;
+      }
+
+      a {
+        text-decoration: none;
+        font-weight: normal;
+      }
+
+      a:hover {
+        text-decoration-line: underline;
+      }
+
+      .separator {
+      }
+
+      .currentAction {
+        font-weight: normal;
+      }
+    }
+
+  }
+
+
+}
+

@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button class="open_nav_button" id="menu"
+          (click)="navService.appDrawer.opened ? navService.closeNav() : navService.openNav()">
+    <i class="fa fa-bars"></i>
+  </button>
+  <span class="TopToHome" (click)="goToHome()">CMS</span>
+  <div class="topbar_content">
+    <div class="theme_select">
+      <span class="theme"><i class="fa fa-paint-brush"></i></span>
+      <mat-select class="mat-select-theme" [(value)]="currentTheme" [ngClass]="currentTheme"
+                  (selectionChange)="onChangeTheme($event)">
+        <mat-option value="default">Default</mat-option>
+        <mat-option value="athena">Athena</mat-option>
+        <mat-option value="poseidon">Poseidon</mat-option>
+        <mat-option value="hera">Hera</mat-option>
+        <mat-option value="zeus">Zeus</mat-option>
+      </mat-select>
+    </div>
+    <div class="language_select">
+      <mat-select class="mat-select-language" [(value)]="selectedLanguage" [ngClass]="selectedLanguage"
+                  (selectionChange)="onChangeLanguage($event)">
+        <ng-container *ngFor="let lang of getLanguages()">
+          <mat-option [value]="lang.code" class="languageOption">
+            <img class="logo" [src]="lang.logo" alt=""/>
+          </mat-option>
+        </ng-container>
+      </mat-select>
+    </div>
+  </div>
+</mat-toolbar>

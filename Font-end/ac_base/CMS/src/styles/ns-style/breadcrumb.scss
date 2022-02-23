@@ -1,0 +1,40 @@
+.breadcrumb {
+  margin: 0;
+  display: flex;
+  height: 2rem;
+  align-items: center;
+
+  .breadcrumbList {
+    margin-left: -1.5rem;
+
+    li {
+      display: inline;
+
+      a {
+        text-decoration: none;
+        color: currentColor;
+        font-size: 1em;
+        font-weight: normal;
+      }
+
+      a:hover {
+        color: #42a5f5;
+        text-decoration-line: underline;
+      }
+
+      .separator {
+        font-size: 1em;
+      }
+
+      .currentAction {
+        color: #ff9800;
+        font-size: 1em;
+        font-weight: normal;
+      }
+    }
+
+  }
+
+
+}
+

@@ -1,0 +1,98 @@
+.ns-table {
+  .mat-column-stt, .mat-column-STT {
+    max-width: 5%;
+    padding: 0;
+
+    .viewData {
+      min-width: 100%;
+    }
+  }
+
+  mat-header-cell {
+    padding-left: 0.5rem;
+    place-content: center;
+    align-items: center;
+
+    .viewData {
+      width: 100%;
+      color: rgb(99, 94, 94);
+      font-size: small;
+      font-weight: 700;
+    }
+
+    mat-checkbox {
+      width: 100%;
+    }
+  }
+
+  mat-cell {
+    padding-left: 0.5rem;
+
+    .viewData {
+      font-size: small;
+      width: 100%;
+      overflow: hidden !important;
+      text-overflow: ellipsis;
+      display: flex;
+      place-content: center;
+      align-content: center;
+      white-space: pre-line;
+
+      &.break-word-style-view {
+        word-break: break-word;
+      }
+    }
+
+    mat-checkbox {
+      width: 100%;
+    }
+  }
+
+  mat-cell:first-child, mat-header-cell:first-child {
+    max-width: 5%;
+    padding: 0;
+  }
+
+  mat-cell:last-of-type, mat-header-cell:last-of-type {
+    padding-right: 0;
+  }
+
+  ns-header-expand-button {
+    .expand-column-header-button {
+      z-index: 2;
+    }
+  }
+
+  .img-view.viewData img {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 6px;
+  }
+}
+
+:host ::ng-deep h2 {
+  padding: 1rem 0.5rem 1rem 0.5rem;
+  margin: 0px;
+}
+
+:host ::ng-deep .mat-custom-page {
+  display: flex;
+  place-content: center;
+  align-items: center;
+}
+
+:host ::ng-deep .expand-column-header-button {
+  position: absolute;
+  right: 1rem !important;
+}
+
+:host ::ng-deep .menu-expand-column {
+  height: 27rem;
+}
+
+:host ::ng-deep .menu-expand-column .header-menu-expand {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: white
+}

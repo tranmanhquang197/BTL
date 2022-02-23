@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.tsolution</groupId>
+		<artifactId>NextSolutionsBase_BUILD</artifactId>
+		<version>1.0.0-RELEASE</version>
+		<relativePath>../NextSolutionsBase_BUILD/pom.xml</relativePath>
+	</parent>
+	<artifactId>NextSolutionsBase</artifactId>
+	<version>1.0.0.Release</version>
+	<name>NextSolutionsBase</name>
+	<packaging>jar</packaging>
+	<description>NextSolutionsBase 1.0.0.Release</description>
+
+</project>

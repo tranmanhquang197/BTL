@@ -1,0 +1,101 @@
+.ns-smart-table {
+  mat-table.ns-smart-table {
+
+  }
+
+  mat-header-cell div {
+    width: 100%;
+    color: rgb(99, 94, 94);
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  mat-header-cell {
+    padding-left: 0.5rem;
+  }
+
+  mat-header-cell:first-child, mat-cell:first-child, mat-footer-cell:first-child {
+    padding-left: 0.5rem;
+  }
+
+  mat-cell {
+    padding-left: 0.5rem;
+    font-size: small;
+    display: flex;
+  }
+
+  mat-cell .viewData {
+    width: 100%;
+    min-width: 100%;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+
+    display: flex;
+    place-content: flex-start;
+    align-content: center;
+
+    white-space: pre-line;
+    word-break: break-word;
+  }
+
+  mat-cell .viewData.break-word-style-view {
+    word-break: initial;
+  }
+
+  mat-cell .inputNumber {
+    width: 100%;
+    min-width: 100%;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+
+    display: flex;
+    place-content: center;
+    align-content: center;
+  }
+
+  mat-cell .multiSelectAutocomplete {
+    min-width: 100%;
+    width: 100%;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    display: flex;
+  }
+
+  .mat-column-stt, .mat-column-STT {
+    max-width: 5%;
+    padding: 0;
+  }
+
+  mat-checkbox {
+    width: 1rem;
+  }
+
+  mat-footer-cell {
+    padding-left: 0.5rem;
+    font-size: small;
+    display: flex;
+  }
+
+  mat-footer-cell .viewData {
+    width: 100%;
+    min-width: 100%;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+
+    display: flex;
+    place-content: flex-start;
+    align-content: center;
+
+    white-space: pre-line;
+    word-break: break-word;
+  }
+}
+
+.ns-smart-table .checkbox-cell {
+  width: 100%;
+}
+
+.ns-smart-table .img-view.viewData img {
+  height: 4rem;
+  width: 4rem;
+}

@@ -1,0 +1,113 @@
+ns-input {
+  width: 100%;
+
+  .required-label-outside {
+    color: red;
+  }
+
+  mat-form-field {
+    cursor: text;
+
+    .mat-form-field-suffix {
+      .input-suffix {
+        color: grey;
+      }
+    }
+  }
+
+  .text_area {
+    textarea {
+      min-height: 56px !important;
+      max-height: 56px !important;
+    }
+
+    mat-form-field:not(.mat-form-field-should-float) .mat-form-field-label-wrapper label {
+      margin: 5px 0 0 5px;;
+    }
+
+    .mat-form-field-underline {
+      display: none;
+    }
+
+    mat-form-field {
+      cursor: text;
+
+      .mat-form-field-suffix {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        .input-suffix {
+          color: grey;
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+        }
+      }
+    }
+  }
+
+  &.equal_height {
+    height: 100%;
+
+    .ns-input {
+      height: 100%;
+
+      mat-form-field {
+        .mat-form-field-wrapper {
+          height: 100%;
+
+          .mat-form-field-flex {
+            height: 100%;
+            padding: 14px 10px !important;
+            flex-direction: column;
+
+            .mat-form-field-infix {
+              padding: 0;
+
+              textarea {
+                height: 100% !important;
+                max-height: 100% !important;
+              }
+            }
+
+            .mat-form-field-suffix {
+              position: relative;
+              width: 100%;
+              height: initial;
+              text-align: right;
+
+              .input-suffix {
+                position: initial !important;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .mat-form-field-infix {
+      height: 75%;
+    }
+  }
+}
+
+ns-input-view {
+  &.reject {
+    .ns-input-view {
+      display: contents;
+
+      .field_name {
+        color: #FF645C;
+      }
+
+      .field_content {
+        background-color: #FFF0EF;
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 15px;
+        height: 100%;
+      }
+    }
+  }
+}

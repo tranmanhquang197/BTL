@@ -1,0 +1,658 @@
+@import '~@angular/material/theming';
+////////////////////////////////////////////////////////////////////
+// POSEIDON THEME
+////////////////////////////////////////////////////////////////////
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("/src/styles/fonts/Comfortaa-Medium.ttf")  format('truetype');
+}
+
+.poseidon fieldset, .poseidon .mat-table, .poseidon .breadcrumb {
+  font-family: "Comfortaa", cursive !important;
+}
+
+$poseidon-typography: mat-typography-config(
+  $font-family:   '"Comfortaa", cursive',
+  $display-4:     mat-typography-level(112px, 112px, 300),
+  $display-3:     mat-typography-level(66px, 56px, 400),
+  $display-2:     mat-typography-level(55px, 48px, 400),
+  $display-1:     mat-typography-level(44px, 40px, 400),
+  $headline:      mat-typography-level(34px, 32px, 400),
+  $title:         mat-typography-level(10px, 32px, 500),
+  $subheading-2:  mat-typography-level(16px, 22px, 500),
+  $subheading-1:  mat-typography-level(15px, 24px, 400),
+  $body-2:        mat-typography-level(14px, 24px, 500),
+  $body-1:        mat-typography-level(14px, 30px, 400),
+  $caption:       mat-typography-level(12px, 20px, 400),
+  $button:        mat-typography-level(14px, 14px, 500),
+    // Line-height must be unit-less fraction of the font-size.
+  $input:         mat-typography-level(inherit, 1.125, 400)
+
+);
+$poseidon-primary-color: (
+  // Backgrounds
+  50: #aec4c7,
+  100: #8bb7be,
+  200: #57a2ae,
+  300: #3e96a7,
+  400: #1e8b9d,
+  500: #0090a8,
+  600: #007a8d,
+  700: #006a7a,
+  800: #00616d,
+  900: #004f53,
+  A100: #73d7d7,
+  A200: #12b1b1,
+  A400: #008b9a,
+  A700: #00667a,
+  contrast: (
+    // Texts
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $light-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+
+$poseidon-theme: mat-light-theme(
+    mat-palette($poseidon-primary-color, A200, A100, A400),
+    mat-palette($mat-orange),
+    mat-palette($mat-purple)
+);
+
+.poseidon {
+  @include angular-material-theme($poseidon-theme);
+  @include angular-material-typography($poseidon-typography);
+  $background: #F0F0F0;
+  $primary: mat-color($poseidon-primary-color, A200);
+  $accent: mat-color($mat-orange, 500);
+  $warn: mat-color($mat-purple, 500);
+  main {
+    background-color: $background;
+  }
+  mat-sidenav-content {
+    background-color: $background;
+  }
+  h1, h2, h3, h4, h5, h6, h7 {
+    color: $primary;
+  }
+
+  .mat-raised-button:not([class*="mat-elevation-z"]),
+  .mat-button:not([class*="mat-elevation-z"]),
+  .mat-fab:not([class*="mat-elevation-z"]),
+  .mat-mini-fab:not([class*="mat-elevation-z"]),
+  .mat-icon-button {
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.12);
+    box-shadow: none;
+  }
+  .mat-chip {
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+  }
+
+  .mat-raised-button.back {
+    color: $light-primary-text;
+    background-color: mat-color($mat-grey, A700);
+  }
+
+  .mat-card {
+    margin: 10px 10px 0 10px;
+  }
+  .mat-checkbox-inner-container {
+    height: 40px;
+    width: 40px;
+  }
+  .mat-checkbox-layout .mat-checkbox-label {
+    line-height: 40px;
+  }
+
+  .mat-list .mat-list-item .mat-list-text h4.mat-line {
+    font-weight: 800;
+    color: $primary;
+  }
+
+  .mat-list .mat-list-item .mat-list-text p.mat-line {
+    color: mat-color($poseidon-primary-color, A100);
+  }
+
+  .mat-card:not([class*="mat-elevation-z"]) {
+    box-sizing: border-box;
+    flex: 1;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.12);
+    box-shadow: none;
+  }
+  .mat-toolbar {
+    background-color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.12);
+    box-shadow: none;
+  }
+  .mat-card.mat-card-accent {
+    background-color: $accent;
+    color: $dark-primary-text;
+  }
+  .mat-card.mat-card-warn {
+    background-color: $warn;
+    color: $light-primary-text;
+  }
+
+  .mat-toolbar.mat-primary {
+    background: transparent;
+  }
+
+  mat-sidenav {
+    background: transparent;
+  }
+
+  mat-sidenav-content {
+    background: transparent;
+  }
+
+  .mat-drawer-container {
+    background-color: transparent;
+    color:white;
+  }
+
+  .mat-drawer {
+    background: transparent;
+  }
+
+  mat-sidenav-container {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #2196f3 !important;
+  }
+
+  :root {
+    scrollbar-color: rgb(5, 56, 140) rgb(3, 1, 52);
+  }
+
+  a {
+    color: #a6d8ff;
+  }
+
+  a:hover {
+    color: #00bcd4;
+  }
+
+  .mat-toolbar {
+    border: none;
+  }
+
+  .topbar_content {
+    background-color: #00d0fc;
+    box-shadow: 0px 11px 11px -8px rgba(0, 0, 0, 0.2);
+  }
+
+  .username i,
+  .theme_select i,
+  .breadcrumb a,
+  .breadcrumb i.fa-home {
+    color:black !important;
+  }
+
+  .breadcrumb span.currentAction,
+  .mat-tree-node,
+  .mat-nested-tree-node,
+  .theme_select:hover span,
+  .breadcrumb i:not(.fa-home),
+  .mat-tab-label,
+  .breadcrumb a:hover {
+    color:white  !important;
+  }
+
+  .open_nav_button,
+  .username span,
+  .theme_select span {
+    color:#156bb0;
+  }
+
+  .mat-tab-label .mat-tab-label-content:before {
+    top: 13px;
+  }
+
+  .mat-paginator,
+  .mat-paginator-page-size .mat-select-trigger,
+  .mat-cell,
+  .mat-footer-cell,
+  .mat-datepicker-toggle,
+  .mat-datepicker-content .mat-calendar-next-button,
+  .mat-datepicker-content .mat-calendar-previous-button,
+  .mat-form-field-label,
+  .mat-select-value {
+    color:white;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: rgba(255, 255, 255, 0.4) !important;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-outline-thick {
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+
+  .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: white;
+  }
+
+  .mat-form-field.mat-focused .mat-form-field-label {
+    color: white;
+  }
+
+  .mat-form-field-appearance-outline.mat-form-field-disabled .mat-icon,
+  .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-label {
+    color: rgba(255, 255, 255, 0.3) !important;
+  }
+
+  mat-table {
+    background-color: transparent !important;
+    border:none;
+    box-shadow: none !important;
+  }
+
+  mat-header-row {
+    background-color:rgba(0, 0, 0, 0.5) !important;
+  }
+
+  mat-table > mat-row:nth-of-type(even) {
+    background-color:rgba(0, 0, 0, 0.12);
+  }
+
+  mat-header-cell, mat-header-cell .viewData, mat-header-cell div {
+    color: white !important;
+  }
+
+  .mat-paginator {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .mat-button.mat-warn, .mat-icon-button.mat-warn, .mat-stroked-button.mat-warn {
+    color:#64b5f6;
+  }
+
+  .mat-tab-header-pagination-chevron {
+    border-color: white;
+  }
+
+  .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron {
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+
+  fieldset {
+    background-color:rgba(0, 0, 0, 0.1);
+    box-shadow: none !important;
+  }
+
+  fieldset legend {
+    color: white !important;
+    background-color: transparent;
+  }
+
+  .mat-input-element:disabled,
+  .mat-form-field-type-mat-native-select.mat-form-field-disabled .mat-form-field-infix::after,
+  .mat-select-disabled .mat-select-value {
+    color:rgba(255, 255, 255, 0.4);
+  }
+
+  .mat-tab-header {
+    border-bottom: none;
+  }
+
+  .mat-tab-body-wrapper {
+    background-color:rgba(0, 0, 0, 0.1);
+  }
+
+  .mat-tab-label .mat-tab-label-content {
+    background-color: rgba(0,0,0,0.1);
+  }
+
+  .mat-tab-label .mat-tab-label-content:hover {
+    background-color: rgba(0,0,0,0.4);
+  }
+
+  .mat-tab-label.mat-tab-label-active .mat-tab-label-content {
+    background-color:rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.4);
+  }
+
+  .mat-tab-group .box-search {
+    background-color:rgba(0, 0, 0, 0.2);
+  }
+
+  .mat-tree {
+    background-color: transparent;
+  }
+
+  app-menu-list-item .mat-list-item .mat-list-item-content {
+    color:white;
+  }
+
+  app-menu-list-item .mat-list-item .mat-icon {
+    color: black;
+  }
+
+  app-menu-list-item .mat-list-item:hover,
+  app-menu-list-item[aria-expanded="true"] .mat-list-item {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+  }
+
+  app-menu-list-item .mat-list-item:hover .mat-icon,
+  app-menu-list-item .mat-list-item:hover .mat-list-item-content,
+  app-menu-list-item[aria-expanded="true"] .mat-list-item .mat-icon,
+  app-menu-list-item[aria-expanded="true"] .mat-list-item .mat-list-item-content {
+    color: #03A9F4;
+  }
+
+  .searchFormGroup .form, .searchFormGroup .content {
+    background-color:rgba(0, 0, 0, 0.1);
+    box-shadow: none !important;
+  }
+
+  .mat-dialog-container {
+    background:#39608f;
+    color:white;
+  }
+
+  .mat-select-panel {
+    background-color: #39608f;
+    //background: linear-gradient(90deg, #39608f 0%, #2c7c88 50%, #395885 100%);
+  }
+
+  .mat-pseudo-checkbox {
+    color:#03A9F4;
+    background-color: black;
+  }
+
+  .mat-checkbox input {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+  }
+
+  .mat-option, .mat-option.mat-active {
+    color: white;
+  }
+
+  .mat-error,
+  .mat-form-field.mat-form-field-invalid .mat-form-field-label.mat-accent,
+  .mat-form-field.mat-form-field-invalid .athena .mat-form-field-label.mat-toolbar,
+  .athena .mat-form-field.mat-form-field-invalid .mat-form-field-label.mat-toolbar,
+  .mat-form-field.mat-form-field-invalid .mat-form-field-label .mat-form-field-required-marker,
+  .mat-form-field-invalid .mat-input-element,
+  .mat-form-field.mat-form-field-invalid .mat-form-field-ripple,
+  .mat-form-field.mat-form-field-invalid .mat-form-field-ripple.mat-accent,
+  .mat-form-field.mat-form-field-invalid .mat-form-field-label,
+  .mat-form-field-appearance-legacy .mat-hint,
+  .mat-warn .mat-input-element,
+  .mat-form-field-invalid .mat-input-element {
+    color: rgba(255, 255, 255, 0.4) !important;
+  }
+
+  .mat-flat-button.mat-primary[disabled], .mat-flat-button.mat-accent[disabled], .mat-flat-button.mat-warn[disabled], .mat-flat-button[disabled][disabled], .mat-raised-button.mat-primary[disabled], .mat-raised-button.mat-accent[disabled], .mat-raised-button.mat-warn[disabled], .mat-raised-button[disabled][disabled], .mat-fab.mat-primary[disabled], .mat-fab.mat-accent[disabled], .mat-fab.mat-warn[disabled], .mat-fab[disabled][disabled], .mat-mini-fab.mat-primary[disabled], .mat-mini-fab.mat-accent[disabled], .mat-mini-fab.mat-warn[disabled], .mat-mini-fab[disabled][disabled] {
+    color: #605b5b;
+    background-color: #ccccd5;
+  }
+
+  .mat-flat-button.mat-primary[disabled]:hover, .mat-flat-button.mat-accent[disabled]:hover, .mat-flat-button.mat-warn[disabled]:hover, .mat-flat-button[disabled]:hover[disabled]:hover, .mat-raised-button.mat-primary[disabled]:hover, .mat-raised-button.mat-accent[disabled]:hover, .mat-raised-button.mat-warn[disabled]:hover, .mat-raised-button[disabled]:hover[disabled]:hover, .mat-fab.mat-primary[disabled]:hover, .mat-fab.mat-accent[disabled]:hover, .mat-fab.mat-warn[disabled]:hover, .mat-fab[disabled]:hover[disabled]:hover, .mat-mini-fab.mat-primary[disabled]:hover, .mat-mini-fab.mat-accent[disabled]:hover, .mat-mini-fab.mat-warn[disabled]:hover, .mat-mini-fab[disabled]:hover[disabled]:hover {
+    background-color: #9a99ac;
+  }
+
+  .mat-focused .mat-form-field-required-marker {
+    color: #12b1b1;
+  }
+
+  label.item-focused {
+    color:#2196f3 !important;
+  }
+
+  .mat-raised-button:not([class*=mat-elevation-z]), .mat-button:not([class*=mat-elevation-z]), .mat-fab:not([class*=mat-elevation-z]), .mat-mini-fab:not([class*=mat-elevation-z]), .mat-icon-button {
+    border-width:0px;
+  }
+
+  .mat-checkbox-inner-container {
+    height:20px;
+    width:20px;
+  }
+
+  .promotionLevelGroupMappingSellRewardStyle {
+    border:none;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .mat-checkbox-frame {
+    border:2px solid #03A9F4;
+    background-color:black;
+  }
+
+  .mat-form-field-appearance-legacy .mat-form-field-underline,
+  .mat-checkbox-disabled .mat-checkbox-label,
+  .mat-button.mat-primary[disabled], .mat-button.mat-accent[disabled], .mat-button.mat-warn[disabled], .mat-button[disabled][disabled], .mat-icon-button.mat-primary[disabled], .mat-icon-button.mat-accent[disabled], .mat-icon-button.mat-warn[disabled], .mat-icon-button[disabled][disabled], .mat-stroked-button.mat-primary[disabled], .mat-stroked-button.mat-accent[disabled], .mat-stroked-button.mat-warn[disabled], .mat-stroked-button[disabled][disabled] {
+    color:rgba(255, 255, 255, 0.4) !important;
+  }
+
+  .mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: rgba(255, 255 ,255, 0.2);
+  }
+
+  .mat-tooltip {
+    background-color:#2196f3 !important;
+  }
+
+  .uploadArea button {
+    background-color:rgba(0, 0, 0, 0.4);
+  }
+
+  .resizer:before {
+    color:#2196f3;
+  }
+
+  .mat-input-element {
+    caret-color: white;;
+  }
+
+  .ql-snow .ql-picker {
+    color: white;
+  }
+
+  .ql-toolbar.ql-snow {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .ql-snow .ql-picker.ql-expanded .ql-picker-label,
+  .ql-snow.ql-toolbar button:hover, .ql-snow .ql-toolbar button:hover, .ql-snow.ql-toolbar button:focus, .ql-snow .ql-toolbar button:focus, .ql-snow.ql-toolbar button.ql-active, .ql-snow .ql-toolbar button.ql-active, .ql-snow.ql-toolbar .ql-picker-label:hover, .ql-snow .ql-toolbar .ql-picker-label:hover, .ql-snow.ql-toolbar .ql-picker-label.ql-active, .ql-snow .ql-toolbar .ql-picker-label.ql-active, .ql-snow.ql-toolbar .ql-picker-item:hover, .ql-snow .ql-toolbar .ql-picker-item:hover, .ql-snow.ql-toolbar .ql-picker-item.ql-selected, .ql-snow .ql-toolbar .ql-picker-item.ql-selected {
+    color: #2196f3;
+  }
+
+  .ql-snow .ql-fill, .ql-snow .ql-stroke.ql-fill ,
+  .ql-snow .ql-stroke {
+    stroke: white;
+  }
+
+  .ql-snow.ql-toolbar button:hover .ql-stroke, .ql-snow .ql-toolbar button:hover .ql-stroke, .ql-snow.ql-toolbar button:focus .ql-stroke, .ql-snow .ql-toolbar button:focus .ql-stroke, .ql-snow.ql-toolbar button.ql-active .ql-stroke, .ql-snow .ql-toolbar button.ql-active .ql-stroke, .ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke, .ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke, .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke, .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke, .ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke, .ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke, .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke, .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke, .ql-snow.ql-toolbar button:hover .ql-stroke-miter, .ql-snow .ql-toolbar button:hover .ql-stroke-miter, .ql-snow.ql-toolbar button:focus .ql-stroke-miter, .ql-snow .ql-toolbar button:focus .ql-stroke-miter, .ql-snow.ql-toolbar button.ql-active .ql-stroke-miter, .ql-snow .ql-toolbar button.ql-active .ql-stroke-miter, .ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke-miter, .ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke-miter, .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter, .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter, .ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke-miter, .ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke-miter, .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter, .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter {
+    stroke: #2196f3;
+  }
+
+  .mat-expansion-panel {
+    background-color: rgba(0,0,0,0.1);
+    box-shadow: none !important;
+  }
+
+  .mat-expansion-panel,
+  .mat-expansion-panel-header-description, .mat-expansion-indicator::after {
+    color: white;
+  }
+
+  .mat-expansion-panel-header {
+    background-color: rgba(0,0,0,0.1);
+  }
+
+  .mat-expansion-panel-header.mat-expanded:focus, .mat-expansion-panel-header.mat-expanded:hover,
+  .mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover {
+    background-color: rgba(0,0,0,0.1);
+  }
+
+  .mat-badge-content {
+    color: black;
+    background-color: white;
+  }
+}
+
+body.poseidon {
+  background: #020024;
+  background: linear-gradient(0deg, #020024 0%, #090979 30%, #00d4ff 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.poseidon .mat-flat-button.mat-primary,
+.poseidon .hera .mat-flat-button.mat-toolbar,
+.hera .poseidon .mat-flat-button.mat-toolbar,
+.poseidon .zeus .mat-flat-button.mat-toolbar,
+.zeus .poseidon .mat-flat-button.mat-toolbar,
+.poseidon .mat-raised-button.mat-primary,
+.poseidon .hera .mat-raised-button.mat-toolbar,
+.hera .poseidon .mat-raised-button.mat-toolbar,
+.poseidon .zeus .mat-raised-button.mat-toolbar,
+.zeus .poseidon .mat-raised-button.mat-toolbar,
+.poseidon .mat-fab.mat-primary,
+.poseidon .hera .mat-fab.mat-toolbar,
+.hera .poseidon .mat-fab.mat-toolbar,
+.poseidon .zeus .mat-fab.mat-toolbar,
+.zeus .poseidon .mat-fab.mat-toolbar,
+.poseidon .mat-mini-fab.mat-primary,
+.poseidon .hera .mat-mini-fab.mat-toolbar,
+.hera .poseidon .mat-mini-fab.mat-toolbar,
+.poseidon .zeus .mat-mini-fab.mat-toolbar,
+.zeus .poseidon .mat-mini-fab.mat-toolbar,
+.poseidon .mat-flat-button,
+.poseidon .mat-raised-button,
+.poseidon .mat-fab,
+.poseidon .mat-mini-fab {
+  color:white;
+  background-color:#2196f3;
+  margin-left:5px !important;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
+.poseidon .mat-flat-button.mat-primary:hover,
+.poseidon .hera .mat-flat-button.mat-toolbar:hover,
+.hera .poseidon .mat-flat-button.mat-toolbar:hover,
+.poseidon .zeus .mat-flat-button.mat-toolbar:hover,
+.zeus .poseidon .mat-flat-button.mat-toolbar:hover,
+.poseidon .mat-raised-button.mat-primary:hover,
+.poseidon .hera .mat-raised-button.mat-toolbar:hover,
+.hera .poseidon .mat-raised-button.mat-toolbar:hover,
+.poseidon .zeus .mat-raised-button.mat-toolbar:hover,
+.zeus .poseidon .mat-raised-button.mat-toolbar:hover,
+.poseidon .mat-fab.mat-primary:hover,
+.poseidon .hera .mat-fab.mat-toolbar:hover,
+.hera .poseidon .mat-fab.mat-toolbar:hover,
+.poseidon .zeus .mat-fab.mat-toolbar:hover,
+.zeus .poseidon .mat-fab.mat-toolbar:hover,
+.poseidon .mat-mini-fab.mat-primary:hover,
+.poseidon .hera .mat-mini-fab.mat-toolbar:hover,
+.hera .poseidon .mat-mini-fab.mat-toolbar:hover,
+.poseidon .zeus .mat-mini-fab.mat-toolbar:hover,
+.zeus .poseidon .mat-mini-fab.mat-toolbar:hover,
+.poseidon .mat-flat-button:hover,
+.poseidon .mat-raised-button:hover,
+.poseidon .mat-fab:hover,
+.poseidon .mat-mini-fab:hover {
+  background-color:#00bcd4;
+}
+
+.poseidon .mat-tab-group.mat-primary .mat-ink-bar,
+.poseidon .hera .mat-tab-group.mat-toolbar .mat-ink-bar,
+.hera .poseidon .mat-tab-group.mat-toolbar .mat-ink-bar,
+.poseidon .zeus .mat-tab-group.mat-toolbar .mat-ink-bar,
+.zeus .poseidon .mat-tab-group.mat-toolbar .mat-ink-bar,
+.poseidon .mat-tab-nav-bar.mat-primary .mat-ink-bar,
+.poseidon .hera .mat-tab-nav-bar.mat-toolbar .mat-ink-bar,
+.hera .poseidon .mat-tab-nav-bar.mat-toolbar .mat-ink-bar,
+.poseidon .zeus .mat-tab-nav-bar.mat-toolbar .mat-ink-bar,
+.zeus .poseidon .mat-tab-nav-bar.mat-toolbar .mat-ink-bar {
+  background-color:rgba(33, 150, 243, 0.5);
+}
+
+.poseidon .mat-button.mat-primary,
+.poseidon .hera .mat-button.mat-toolbar,
+.hera .poseidon .mat-button.mat-toolbar,
+.poseidon .zeus .mat-button.mat-toolbar,
+.zeus .poseidon .mat-button.mat-toolbar,
+.poseidon .mat-icon-button.mat-primary,
+.poseidon .hera .mat-icon-button.mat-toolbar,
+.hera .poseidon .mat-icon-button.mat-toolbar,
+.poseidon .zeus .mat-icon-button.mat-toolbar,
+.zeus .poseidon .mat-icon-button.mat-toolbar,
+.poseidon .mat-stroked-button.mat-primary,
+.poseidon .hera .mat-stroked-button.mat-toolbar,
+.hera .poseidon .mat-stroked-button.mat-toolbar,
+.poseidon .zeus .mat-stroked-button.mat-toolbar,
+.zeus .poseidon .mat-stroked-button.mat-toolbar {
+  color: white;
+  background-color: #2196f3;
+  margin-left: 5px !important;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
+.poseidon .mat-button.mat-primary:hover,
+.poseidon .hera .mat-button.mat-toolbar:hover,
+.hera .poseidon .mat-button.mat-toolbar:hover,
+.poseidon .zeus .mat-button.mat-toolbar:hover,
+.zeus .poseidon .mat-button.mat-toolbar:hover,
+.poseidon .mat-icon-button.mat-primary:hover,
+.poseidon .hera .mat-icon-button.mat-toolbar:hover,
+.hera .poseidon .mat-icon-button.mat-toolbar:hover,
+.poseidon .zeus .mat-icon-button.mat-toolbar:hover,
+.zeus .poseidon .mat-icon-button.mat-toolbar:hover,
+.poseidon .mat-stroked-button.mat-primary:hover,
+.poseidon .hera .mat-stroked-button.mat-toolbar:hover,
+.hera .poseidon .mat-stroked-button.mat-toolbar:hover,
+.poseidon .zeus .mat-stroked-button.mat-toolbar:hover,
+.zeus .poseidon .mat-stroked-button.mat-toolbar:hover {
+  background-color:#00bcd4;
+}
+
+@media screen and (max-width: 767px) {
+  .poseidon .mat-toolbar.mat-primary,
+  .poseidon .hera .mat-toolbar,
+  .hera .poseidon .mat-toolbar,
+  .poseidon .zeus .mat-toolbar,
+  .zeus .poseidon .mat-toolbar {
+    background-color:rgba(255, 255, 255, 0.7);
+  }
+
+  .poseidon .topbar_content {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .poseidon .table-responsive.fixed_header mat-header-cell {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+  }
+}

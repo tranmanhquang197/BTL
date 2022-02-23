@@ -1,0 +1,37 @@
+ns-input {
+  width: 100%;
+
+  .required-label-outside{
+    color: red;
+  }
+
+  mat-form-field {
+
+    .input-suffix{
+      color: grey
+    }
+  }
+}
+
+ns-input-view {
+  &.reject {
+    .ns-input-view {
+      display: contents;
+
+      .field_name {
+        color: #FF645C;
+      }
+
+      .field_content {
+        background-color: #FFF0EF;
+        border-radius: 8px;
+        padding: 10px;
+        height: 100%;
+
+        @media screen and (min-width: 768px) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

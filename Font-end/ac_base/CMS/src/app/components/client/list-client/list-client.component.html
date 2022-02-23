@@ -1,0 +1,28 @@
+<form class="acbox" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+  <div fxLayout="row wrap" class="row-wrap-padding">
+    <div class="form_title">{{ 'client.management' | translate }}</div>
+    <ns-input formControlName="text"
+              [isLabelOutside]="true"
+              [formGroup]="searchForm"
+              [placeholder]="'permission.management.search'"
+              fxLayout="column" fxFlex="100%">
+    </ns-input>
+    <div fxLayout="column" fxFlex="100%">
+      <div class="buttonArea left">
+        <button mat-button type="submit" class="primary">
+          <i class="fa fa-search"></i> {{'btnSearch'|translate}}
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
+<div class="acbox">
+  <ns-table [columns]="columns"
+            [buttons]="buttons"
+            [paging]="paging"
+            (pagingChange)="pagingChange($event)"
+            [moduleName]="moduleName"
+            [results]="results"
+            (clickAction)="onRowButtonClick($event)">
+  </ns-table>
+</div>

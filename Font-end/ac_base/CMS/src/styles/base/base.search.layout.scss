@@ -1,0 +1,46 @@
+.searchFormGroup {
+  margin: 1rem;
+
+  .content {
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+  }
+
+  h2 {
+    margin: 0.5rem 0 0.5rem 1rem;
+  }
+
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+    margin-bottom: 1rem;
+
+    div {
+      padding: 0 0.5rem;
+    }
+
+    div:nth-child(1) {
+      flex-grow: 1;
+      flex-basis: calc(67% - 1rem);
+    }
+
+    div:nth-child(2) {
+      flex-grow: 1;
+      flex-basis: calc(20% - 1rem);
+    }
+
+    .buttonArea {
+      flex-grow: 1;
+      display: flex;
+      place-content: center;
+      align-items: center;
+      padding: 0.5rem;
+
+      button {
+        margin: 0rem 0.5rem;
+      }
+    }
+  }
+
+}
+

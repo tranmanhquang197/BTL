@@ -1,0 +1,20 @@
+<div class="dialog_wrapper">
+  <div class="dialog_header">
+    <div class="dialog_title">{{(title + '') | translate}}: {{userData && userData.username}}</div>
+  </div>
+  <div class="dialog_content padding-20">
+    <h4>{{'user.management.modal.role'|translate}}:</h4>
+    <div class="roleList" fxLayout="row wrap" fxLayoutAlign="left">
+      <div class="roleRow" fxFlex="50%" *ngFor="let role of roleList">
+        <mat-checkbox [value]="role.id" [checked]="isChecked(role.id)" (change)="createRoleIds($event)">
+          <mat-label [title]="role.description">{{role.roleName}}</mat-label>
+        </mat-checkbox>
+      </div>
+    </div>
+  </div>
+  <div class="dialog_footer center">
+    <div>
+      <button mat-button type="submit" class="primary" (click)="onSubmit()">{{'btnAddEdit'|translate}}</button>
+    </div>
+  </div>
+</div>

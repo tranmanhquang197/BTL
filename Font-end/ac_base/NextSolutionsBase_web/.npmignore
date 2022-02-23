@@ -1,0 +1,6 @@
+src
+Next-Solutions-Base.iml
+tslint.json
+tsconfig.json
+.prettierrc
+node_modules

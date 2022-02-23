@@ -1,0 +1,331 @@
+ns-flat-tree, ns-flat-tree-test {
+  margin-bottom: 15px;
+
+  .mat-form-field-wrapper {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  ns-flat-tree-node-left,
+  ns-flat-tree-node-right,
+  ns-flat-tree-node-left-test,
+  ns-flat-tree-node-right-test,
+  mat-tree-node {
+    min-height: 48px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    place-content: space-between;
+    align-items: center;
+
+    .label-area {
+      button.mat-icon-button {
+        width: 15px;
+        margin-right: 10px;
+      }
+    }
+
+    mat-checkbox {
+      .mat-checkbox-ripple {
+        width: initial !important;
+        height: initial !important;
+      }
+
+      &.mat-checkbox-indeterminate {
+        .mat-checkbox-background {
+          background: #4CD964 !important;
+        }
+      }
+    }
+
+    &[aria-level="0"], &[aria-level="1"] {
+      font-weight: bold;
+    }
+  }
+
+  .tree-area {
+    border: 1px solid #E9E9E9;
+    border-radius: 12px;
+
+    .choose-area {
+      padding: 20px 10px 20px 20px;
+      border-right: 1px solid #E9E9E9;
+
+      //&.hiddenTree {
+      //  display: none !important;
+      //}
+
+      //.hideChooseNode {
+      //  display: none !important;
+      //}
+
+      .header-choose-area {
+        margin-right: 10px;
+
+        .title-choose-tree {
+          width: 0;
+        }
+      }
+
+
+    }
+
+    .selected-area {
+      padding: 20px 10px 20px 20px;
+
+      &.hiddenTree {
+        padding: 0 20px;
+        max-width: 100% !important;
+
+        //cdk-virtual-scroll-viewport {
+        //  display: none !important;
+        //}
+      }
+
+      //.hideSelectedNode {
+      //  display: none !important;
+      //}
+
+      .header-area {
+        display: flex;
+        place-content: space-between;
+        align-items: center;
+        height: 48px;
+        margin-right: 10px;
+
+        label {
+          font-weight: bold;
+          max-height: 20px;
+          //max-width: 150px;
+          overflow: hidden;
+        }
+
+        .collapse-expand-all {
+          max-height: 20px;
+          max-width: 100px;
+          overflow: hidden;
+
+          i {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+
+    cdk-virtual-scroll-viewport {
+      position: initial;
+      contain: initial;
+      transform: initial;
+      padding-right: 10px;
+
+      .cdk-virtual-scroll-content-wrapper {
+        position: initial;
+
+        //.mat-tree {
+        //  margin-right: 10px;
+        //}
+      }
+    }
+  }
+
+  div {
+    .required-label-outside {
+      color: red;
+    }
+
+    .isClickDiv:hover {
+      cursor: pointer;
+    }
+
+    .collapse-expand-all:hover {
+      cursor: pointer;
+    }
+  }
+
+  mat-hint {
+    color: red;
+  }
+
+  &.view_detail {
+    .ns-flat-tree {
+      display: block !important;
+
+      mat-label {
+        .label {
+          font-weight: bold;
+          height: auto;
+          margin-bottom: 8px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+
+    cdk-virtual-scroll-viewport {
+      height: 140px !important;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+//ns-flat-tree {
+//  margin-bottom: 15px;
+//
+//  .mat-form-field-wrapper {
+//    margin: 0 !important;
+//    padding: 0 !important;
+//  }
+//
+//  mat-tree-node {
+//    .label-area {
+//      button.mat-icon-button {
+//        width: 15px;
+//        margin-right: 10px;
+//      }
+//    }
+//
+//    mat-checkbox {
+//      .mat-checkbox-ripple {
+//        width: initial !important;
+//        height: initial !important;
+//      }
+//
+//      &.mat-checkbox-indeterminate {
+//        .mat-checkbox-background {
+//          background: #4CD964 !important;
+//        }
+//      }
+//    }
+//
+//    &[aria-level="1"], &[aria-level="2"] {
+//      font-weight: bold;
+//    }
+//  }
+//
+//  .tree-area {
+//    border: 1px solid #E9E9E9;
+//    border-radius: 12px;
+//
+//    .choose-area {
+//      padding: 20px 10px 20px 20px;
+//      border-right: 1px solid #E9E9E9;
+//
+//      &.hiddenTree {
+//        display: none !important;
+//      }
+//
+//      //.hideChooseNode {
+//      //  display: none !important;
+//      //}
+//
+//      .header-choose-area {
+//        margin-right: 10px;
+//
+//        .title-choose-tree {
+//          width: 0;
+//        }
+//      }
+//
+//
+//    }
+//
+//    .selected-area {
+//      padding: 20px 10px 20px 20px;
+//
+//      &.hiddenTree {
+//        padding: 0 20px;
+//        max-width: 100% !important;
+//
+//        cdk-virtual-scroll-viewport {
+//          display: none !important;
+//        }
+//      }
+//
+//      .hideSelectedNode {
+//        display: none !important;
+//      }
+//
+//      .header-area {
+//        display: flex;
+//        place-content: space-between;
+//        align-items: center;
+//        height: 48px;
+//        margin-right: 10px;
+//
+//        label {
+//          font-weight: bold;
+//          max-height: 20px;
+//          max-width: 150px;
+//          overflow: hidden;
+//        }
+//
+//        .collapse-expand-all {
+//          max-height: 20px;
+//          max-width: 100px;
+//          overflow: hidden;
+//
+//          i {
+//            margin-left: 5px;
+//          }
+//        }
+//      }
+//    }
+//
+//    cdk-virtual-scroll-viewport {
+//      position: initial;
+//      contain: initial;
+//      transform: initial;
+//
+//      .cdk-virtual-scroll-content-wrapper {
+//        position: initial;
+//
+//        .mat-tree {
+//          margin-right: 10px;
+//        }
+//      }
+//    }
+//  }
+//
+//  div {
+//    .required-label-outside {
+//      color: red;
+//    }
+//
+//    .isClickDiv:hover {
+//      cursor: pointer;
+//    }
+//
+//    .collapse-expand-all:hover {
+//      cursor: pointer;
+//    }
+//  }
+//
+//  mat-hint {
+//    color: red;
+//  }
+//
+//  &.view_detail {
+//    .ns-flat-tree {
+//      display: block !important;
+//
+//      mat-label {
+//        .label {
+//          font-weight: bold;
+//          height: auto;
+//          margin-bottom: 8px;
+//        }
+//      }
+//    }
+//
+//    @media screen and (max-width: 767px) {
+//      margin-bottom: 20px;
+//    }
+//
+//    cdk-virtual-scroll-viewport {
+//      height: 140px !important;
+//      margin-bottom: 15px;
+//    }
+//  }
+//}

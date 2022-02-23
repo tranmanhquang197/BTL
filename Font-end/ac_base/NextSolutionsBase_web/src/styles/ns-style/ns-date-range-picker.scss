@@ -1,0 +1,22 @@
+.ns-range-date-picker {
+  width: 100%;
+
+  .btnDatePicker {
+    min-width: 33px;
+    padding: 0px;
+  }
+
+  .required-label-outside {
+    color: red;
+  }
+
+  mat-form-field {
+    .mat-date-range-input-mirror {
+      width: 90px;
+    }
+
+    .mat-date-range-input-start-wrapper{
+      width: 5.5rem;
+    }
+  }
+}
