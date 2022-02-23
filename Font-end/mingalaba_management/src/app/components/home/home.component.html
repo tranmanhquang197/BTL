@@ -1,0 +1,223 @@
+<app-header [add] = "lengShopping"></app-header>
+<div class="slider">
+    <swiper [pagination]="true" class="mySwiper"
+            [slidesPerView]="1"  [autoplay]="{ delay: 2500,disableOnInteraction: false}"
+    >
+        <ng-template swiperSlide>
+            <div class="slide-item"
+                 style="background-image: url('http://lazeapostolski.com/sophia-ecommerce/assets/images/carousel/banner1.jpg')">
+                <div class="sl-wrap">
+                    <div class="content" fxLayout="column" fxLayoutAlign="center left">
+                        <h1>Our best products</h1>
+                        <h3>Special selection</h3>
+                        <button class="mat-focus-indicator mat-raised-button mat-button-base mat-primary"
+                                color="primary">
+                            SHOP NOW
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template swiperSlide>
+            <div class="slide-item"
+                 style="background-image: url('http://lazeapostolski.com/sophia-ecommerce/assets/images/carousel/banner3.jpg')">
+                <div class="sl-wrap">
+                    <div class="content" fxLayout="column" fxLayoutAlign="center left">
+                        <h1>Our best products</h1>
+                        <h3>Special selection</h3>
+                        <button class="mat-focus-indicator mat-raised-button mat-button-base mat-primary"
+                                color="primary">
+                            SHOP NOW
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template swiperSlide>
+            <div class="slide-item"
+                 style="background-image: url('http://lazeapostolski.com/sophia-ecommerce/assets/images/carousel/banner1.jpg')">
+                <div class="sl-wrap">
+                    <div class="content" fxLayout="column" fxLayoutAlign="center left">
+                        <h1>Our best products</h1>
+                        <h3>Special selection</h3>
+                        <button class="mat-focus-indicator mat-raised-button mat-button-base mat-primary"
+                                color="primary">
+                            SHOP NOW
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </swiper>
+</div>
+<div class="info-ship">
+    <img src="/assets/files/ship.png">
+</div>
+
+<div class = "cagetory">
+    <div fxLayout="row" class = "product-title">
+        <div class = "product-left" fxFlex = "25%">
+            <span >Sản phẩm nổi bật</span>
+        </div>
+        <div fxFlex = "75%">
+
+        </div>
+    </div>
+</div>
+<div class  = "list-product-sales" fxLayout="row wrap">
+        <div fxFlex="20%" fxFlex.xs="100%" fxFlex.md="100%" fxFlex.sm="100%" fxLayout="column" *ngFor="let item of listProductSearch"  class="product">
+            <div class="product-item">
+                <div class="product-img">
+                    <a routerLink="/product-detail/{{ item.id}}" class=product-link>
+                        <img src="{{ item.product}}">
+                    </a>
+                </div>
+            </div>
+            <div class="product-info-wrapper">
+                        <span class="category">
+                            {{ item.productype}}
+                        </span>
+                <div class="title-wrap">
+                    <h4>{{ item.name}}</h4>
+                </div>
+                <div class="price-wrap">
+                    <p>{{ item.price}}</p>
+                </div>
+                <div class="btn-wrap" fxLayout="row" fxLayoutAlign="center center">
+                    <a (click)="addToCart(item)" color="primary">
+                                    <span class="mat-button-wrapper">ADD TO CART
+                                        <mat-icon style="font-size :18px"
+                                                  class="mat-icon-lg mat-icon material-icons notranslate mat-icon-no-color"
+                                                  role="img" aria-hidden="true"
+                                                  data-mat-icon-type="font">shopping_cart
+                                        </mat-icon>
+                                    </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+<div class="list-product-sale">
+    <mat-tab-group>
+        <mat-tab label="FEATURED PRODUCTS">
+            <swiper [pagination]="true" class="mySwiper"
+                    [slidesPerView]="5" [spaceBetween]="20" [autoplay]="{ delay: 2500,disableOnInteraction: false}"
+            >
+                <ng-template *ngFor="let item of listProduct" swiperSlide>
+                    <div class="product">
+                        <div class="product-item">
+                            <div class="product-img">
+                                <a routerLink="/product-detail/{{ item.id}}" class=product-link>
+                                    <img src="{{ item.product}}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-info-wrapper">
+                        <span class="category">
+                            {{ item.productype}}
+                        </span>
+                            <div class="title-wrap">
+                                <h4>{{ item.name}}</h4>
+                            </div>
+                            <div class="price-wrap">
+                                <p>{{ item.price}}</p>
+                            </div>
+                            <div class="btn-wrap" fxLayout="row" fxLayoutAlign="center center">
+                                <a (click)="addToCart(item)" color="primary">
+                                    <span class="mat-button-wrapper">ADD TO CART
+                                        <mat-icon style="font-size :18px"
+                                                  class="mat-icon-lg mat-icon material-icons notranslate mat-icon-no-color"
+                                                  role="img" aria-hidden="true"
+                                                  data-mat-icon-type="font">shopping_cart
+                                        </mat-icon>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </swiper>
+        </mat-tab>
+        <mat-tab label="LATEST PRODUCTS">
+            <swiper [pagination]="true" class="mySwiper"
+                    [slidesPerView]="5" [spaceBetween]="20" [autoplay]="{ delay: 2500,disableOnInteraction: false}"
+            >
+                <ng-template *ngFor="let item of listProduct" swiperSlide>
+                    <div class="product">
+                        <div class="product-item">
+                            <div class="product-img">
+                                <a routerLink="/product-detail/{{ item.id}}" class=product-link>
+                                    <img src="{{ item.product}}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-info-wrapper">
+                        <span class="category">
+                            {{ item.productype}}
+                        </span>
+                            <div class="title-wrap">
+                                <h4>{{ item.name}}</h4>
+                            </div>
+                            <div class="price-wrap">
+                                <p>{{ item.price}}</p>
+                            </div>
+                            <div class="btn-wrap" fxLayout="row" fxLayoutAlign="center center">
+                                <a (click)="addToCart(item)"  color="primary">
+                                    <span class="mat-button-wrapper">ADD TO CART
+                                        <mat-icon style="font-size :18px"
+                                                  class="mat-icon-lg mat-icon material-icons notranslate mat-icon-no-color"
+                                                  role="img" aria-hidden="true"
+                                                  data-mat-icon-type="font">shopping_cart
+                                        </mat-icon>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </swiper>
+        </mat-tab>
+        <mat-tab label="ON SALE PRODUCTS">
+            <swiper [pagination]="true" class="mySwiper"
+                    [slidesPerView]="5" [spaceBetween]="20" [autoplay]="{ delay: 2500,disableOnInteraction: false}"
+            >
+                <ng-template *ngFor="let item of listProduct" swiperSlide>
+                    <div class="product">
+                        <div class="product-item">
+                            <div class="product-img">
+                                <a routerLink="/product-detail/{{ item.id}}" class=product-link>
+                                    <img src="{{ item.product}}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-info-wrapper">
+                        <span class="category">
+                            {{ item.productype}}
+                        </span>
+                            <div class="title-wrap">
+                                <h4>{{ item.name}}</h4>
+                            </div>
+                            <div class="price-wrap">
+                                <p>{{ item.price}}</p>
+                            </div>
+                            <div class="btn-wrap" fxLayout="row" fxLayoutAlign="center center">
+                                <a (click)="addToCart(item)"  color="primary">
+                                    <span class="mat-button-wrapper">ADD TO CART
+                                        <mat-icon style="font-size :18px"
+                                                  class="mat-icon-lg mat-icon material-icons notranslate mat-icon-no-color"
+                                                  role="img" aria-hidden="true"
+                                                  data-mat-icon-type="font">shopping_cart
+                                        </mat-icon>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </swiper>
+        </mat-tab>
+    </mat-tab-group>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,98 @@
+<app-header [add]="lengShopping"></app-header>
+<div class="product-detail">
+    <div fxFlex="100%" fxLayout="row">
+        <div fxFlex="80%">
+            <div fxFlex="100%" fxLayout="row wrap">
+                <div fxFlex="50%">
+                    <div class="product-imame">
+                        <img style = "max-width: 350px;object-fit: cover;" src="{{urlImage}}">
+                    </div>
+                    <div class="slider-image-detail">
+                        <swiper [pagination]="true" class="mySwiper"
+                                [slidesPerView]="3" [spaceBetween]="20"
+                        >
+                            <ng-template *ngFor="let url of product?.attachMents" swiperSlide>
+                                <div class="image-detail">
+                                    <img (click) = "setUrl(url?.url)" src="{{ url?.url}}">
+                                </div>
+                            </ng-template>
+                        </swiper>
+                    </div>
+                </div>
+                <div fxFlex="50%">
+                    <div class="product-right">
+                        <div class="product-info">
+                            <h2> Sách kinh doanh </h2>
+                            <h4 class=price>
+                                <del>$70.00</del>
+                                <span>
+                                {{product?.price}}
+                            </span>
+                            </h4>
+                            <h3 class="price-real">
+                                {{product?.price}}
+                            </h3>
+                            <p class="text-muted">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industrys standard dummy text ever since the 1500s, when an unknown printer
+                                took a galley of type and scrambled it to make a type specimen book.
+                            </p>
+                        </div>
+                        <div>
+                                <span>
+                                    {{value}}
+                                </span>
+                        </div>
+                        <br>
+                        <div class="quantity">
+                            <div fxLayout="row" fxFlex="100%">
+                                <div fxLayout="row" fxlayoutalign="center start">
+                                    <button (click)="minus()" class="mat-focus-indicator mat-icon-button mat-button-base"
+                                            mattooltip="Remove">
+                                        <span class="mat-button-wrapper">
+                                            <mat-icon class="mat-icon notranslate material-icons mat-icon-no-color">remove</mat-icon>
+                                        </span>
+                                        <span class="mat-button-ripple mat-ripple mat-button-ripple-round"
+                                              matripple=""></span>
+                                        <span class="mat-button-focus-overlay"></span>
+                                    </button>
+                                    <input [value]="value"  class="form-control input-number" name="quantity" type="text">
+                                    <button (click)="plus()"  class="mat-focus-indicator mat-icon-button mat-button-base" mat-icon-button="" mattooltip="Add">
+                                        <span class="mat-button-wrapper">
+                                            <mat-icon  class="mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true" data-mat-icon-type="font">
+                                                add
+                                            </mat-icon>
+                                        </span>
+                                        <span class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></span>
+                                        <span class="mat-button-focus-overlay"></span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add-cart">
+                            <button (click)="addShoppingCart(product)"  class="btn-project mr-10 mat-focus-indicator mat-raised-button mat-button-base mat-primary" color="primary" mat-raised-button="">
+                                <span class="mat-button-wrapper">
+                                    ADD TO CARD
+                                </span>
+                                <span class="mat-button-ripple mat-ripple" matripple="">
+                                </span><span class="mat-button-focus-overlay"></span>
+                            </button>
+                            <button  style = "margin-left: 10px;" class="btn-project mat-focus-indicator mat-raised-button mat-button-base mat-primary" color="primary" mat-raised-button="">
+                                <span class="mat-button-wrapper">BUY NOW</span>
+                                <span class="mat-button-ripple mat-ripple" matripple=""></span>
+                                <span class="mat-button-focus-overlay"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div fxFlex="20%">
+            <div class = "sale">
+                <img src="/assets/files/sale.png">
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

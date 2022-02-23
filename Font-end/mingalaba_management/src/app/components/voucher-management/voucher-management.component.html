@@ -1,0 +1,78 @@
+<div class='searchFormGroup voucher-management'>
+  <form [formGroup]='searchForm' (ngSubmit)='search()' class='acbox'
+        style='box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.06);'>
+    <div fxLayout='row wrap'  fxLayoutAlign="space-between" class='row-wrap-padding'>
+      <!--      <div class="form_title">{{'voucher-management.heading.title' }}</div>-->
+      <ns-input formControlName='title'
+                [placeholder]="'Name'"
+                [isLabelOutside]='true' fxLayout='column' fxFlex='45%' fxFlex.lt-md='100%'>
+      </ns-input>
+      <ns-input formControlName='business_name'
+                [placeholder]="'Product type'"
+                [isLabelOutside]='true' fxLayout='column' fxFlex='45%' fxFlex.lt-md='100%'>
+      </ns-input>
+      <div fxLayout='row' fxFlex='45%'
+           fxFlex.lt-md='100%' style='padding: 0 10px'>
+        <p fxLayout='column' style='max-width: 165px; min-width: 165px'>Create date</p>
+        <ns-date-picker name='publish_date_from'
+                        formControlName='publish_date_from'
+                        (ngModelChange)="changeDateFrom($event)"
+                        [placeholder]="'dd/MM/yyyy'"
+                        [isLabelOutside]='true'
+                        class='label-pos'
+                        fxLayout='column' fxFlex='50%'
+                        fxFlex.xs='100%' fxFlex.sm='50%' fxFlex.md='50%' fxFlex.lg='50%'
+        ></ns-date-picker>
+        <p style='padding: 0 20px; margin-top: 11px;'>-</p>
+        <ns-date-picker name='publish_date_to'
+                        formControlName='publish_date_to'
+                        class='label-pos'
+                        (ngModelChange)="changeDateTo($event)"
+                        [placeholder]="'dd/MM/yyyy'"
+                        [minDate]="minToDate"
+                        [isLabelOutside]='true'
+                        fxLayout='column' fxFlex='50%'
+                        fxFlex.xs='100%' fxFlex.sm='50%' fxFlex.md='50%' fxFlex.lg='50%'
+        ></ns-date-picker>
+      </div>
+      <ns-multi-select-autocomplete [isLabelOutside]='true'
+                                    formControlName='status'
+                                    [options]='statusOptions'
+                                    [multiple]='false'
+                                    fxLayout='column' fxFlex='45%' fxFlex.lt-md='100%'
+                                    [placeholder]="'voucher-management.table.header.status'">
+      </ns-multi-select-autocomplete>
+
+      <div fxLayout='column' fxFlex='100%'>
+        <div class='buttonArea right'>
+          <button [disabled]="DisableFromToDate" mat-button type='submit' class='primary'>
+            {{'btnSearch'|translate}}
+          </button>
+          <button mat-button type='button' class='secondary outline' (click)='resetSearchFormValue()'>
+            {{'btnReset' |translate}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+  <div class='result-area margin-bottom-20' fxLayout fxLayoutAlign='space-between center'>
+<!--    <h3 class='margin-0'>{{' ' + ('total.results'| translate) }} {{paging.totalElements}} </h3>-->
+    <h3 class='margin-0'>{{' ' + ('total.results'| translate) }} {{paging.totalElements}} </h3>
+    <div class='button-area' fxLayout>
+      <button mat-button class='primary' (click)='createVoucher()'>
+        <i class='fa fa-plus' aria-hidden='true'></i>
+        {{'voucher-management.button.create' | translate}}
+      </button>
+    </div>
+  </div>
+
+  <div class='acbox' style='box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.06);'>
+    <ns-table [columns]='columns' [buttons]='button' *ngIf='searchForm.valid'
+              [paging]='paging' (pagingChange)='pagingChange($event)'
+              [moduleName]='moduleName' [results]='results'
+              (onRowClickAction)="onRowClickAction($event)"
+              (clickAction)='onRowButtonClick($event)'>
+    </ns-table>
+  </div>
+</div>
+

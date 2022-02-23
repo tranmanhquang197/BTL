@@ -1,0 +1,52 @@
+{
+  "common.go": "Go",
+  "MatPaginator.itemsPerPageLabel": "The number of records on the page",
+  "MatPaginator.nextPageLabel": "next",
+  "MatPaginator.previousPageLabel": "previous",
+  "common.gotopage": "Go to page:",
+  "btnSearch": "Search",
+  "btnReset": "Clear all filter",
+  "btnUpload": "Upload excel",
+  "btnCancel": "Cancel",
+  "btnImport": "Import",
+  "btnExportTemplate": "Export template",
+  "common.label.action": "Action",
+  "menu.user-management": "User management",
+  "common.Cancel": "Cancel",
+  "common.OK": "Ok",
+  "common.statusOption.inactive": "Inactive",
+  "common.statusOption.active": "Active",
+  "common.statusOption.basic": "Basic",
+  "common.statusOption.hit": "Hit",
+  "total.results": "Total results : ",
+  "female": "Nữ",
+  "male": "Nam",
+  "none": "Không xác định",
+  "other": "Giới tính khác",
+  "login": {
+    "username": "Username",
+    "password": "Password",
+    "login": "Log in"
+  },
+  "menu": {
+    "dashboard": "Dashboard",
+    "logout": "Logout",
+    "voucher": "Voucher",
+    "evoucher": "Evoucher",
+    "customer-care": "Customer care",
+    "users": "Users"
+  },
+
+  "validation": {
+    "quantity": {
+      "pattern": {
+        "number": "Quantity wrong format"
+      },
+      "input": {
+        "pattern": "Quantity wrong format"
+      }
+    }
+  }
+}
+
+

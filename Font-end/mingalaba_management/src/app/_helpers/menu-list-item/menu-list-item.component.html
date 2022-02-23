@@ -1,0 +1,16 @@
+<a mat-list-item (click)="onItemSelected(item)"
+   [ngClass]="onCreateNgClass()"
+   class="menu-list-item">
+  <i class="routeIcon {{item ? item.iconName : ''}}"></i>
+  <div *ngIf="item ? !item.isOnlyIcon : false">{{(item ? item.displayName : '') | translate}}</div>
+  <span fxFlex *ngIf="item && item.children && item.children.length && !item.isOnlyIcon">
+    <span fxFlex></span>
+    <mat-icon [@indicatorRotate]="(item && item.expanded) ? 'expanded': 'collapsed'">
+      expand_more
+    </mat-icon>
+  </span>
+</a>
+<div *ngIf="item && item.expanded && !item.isOnlyIcon">
+  <app-menu-list-item *ngFor="let child of (item ? item.children : [])" [item]="child" [depth]="(depth ? depth : 0)+1">
+  </app-menu-list-item>
+</div>

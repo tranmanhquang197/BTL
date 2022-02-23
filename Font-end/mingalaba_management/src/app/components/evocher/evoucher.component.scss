@@ -1,0 +1,57 @@
+.evoucher-management{
+  .voucher-title-size {
+    max-width: 10rem !important;
+
+  }
+
+  .evoucher-title-size div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block !important;
+
+  }
+
+  .banner-image {
+    max-width: 7rem !important;
+  }
+
+  .ns-table .img-view.viewData img {
+    width: 150px !important;
+    object-fit: cover;
+  }
+
+  fieldset legend {
+    color: #118352 !important;
+  }
+
+  .label-pos {
+    mat-label {
+      display: none !important;
+    }
+  }
+
+  a{
+    text-decoration: none !important;
+  }
+  .cdk-column-number{
+    width: 10% !important;
+  }
+
+  .cdk-column-image{
+    width: 23% !important;
+  }
+
+  .cdk-column-name{
+    width: 26% !important;
+  }
+
+  .cdk-column-status{
+    width: 17% !important;
+  }
+
+  .cdk-column-create-date{
+    width: 23% !important;
+  }
+
+}

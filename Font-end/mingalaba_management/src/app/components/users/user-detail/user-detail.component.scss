@@ -1,0 +1,200 @@
+.user-detail{
+  width: 100%;
+  height: 100%;
+  background-color: #f4f9ff;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 12px;
+
+  .customer mat-label{
+    color:red!important;
+  }
+  //.mat-option-text{
+  //  color: black;
+  //}
+  //
+  //.mat-pseudo-checkbox{
+  //  display: none!important;
+  //}
+  //
+  //.mat-checkbox{
+  //  display: none !important;
+  //}
+
+}
+
+
+/*.evoucher-detail img {*/
+/*  display: none;*/
+/*}*/
+
+.evoucher-detail .ns-flat-tree {
+  height: 175px !important;
+}
+.evoucher-detail .ns-flat-tree .selected-area {
+  height: 175px !important;
+}
+.evoucher-detail .ns-flat-tree mat-label .label{
+  color :#989898;
+}
+
+.padding-content {
+  padding-left: 70px !important;
+}
+
+.acbox {
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+}
+
+#size-img {
+  max-height: 200px;
+  border-radius: 15px;
+}
+
+.valid-time {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #989898;
+}
+
+.label-time-publish {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #989898;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 32px;
+}
+
+.label-description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0px 32px;
+  word-break: break-word;
+}
+
+.evoucher-detail .btn-footer {
+  justify-content: center;
+}
+
+.btn-action {
+  width: 357px;
+  height: 52px;
+  border: none!important;
+  box-sizing: border-box;
+  border-radius: 15px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #118352;
+  margin: 0 30px;
+}
+
+.btn-color-add {
+  background: #289767 !important;
+  color: #FFFFFF;
+}
+
+.no-margin {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+}
+
+.label-style {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #989898;
+}
+
+.ns-input-title-view {
+  color: #11A2F3;
+  font-weight: 400 !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 60rem;
+}
+
+.btn-detail-action {
+  width: 161px;
+  height: 40px;
+  border-radius: 15px;
+  padding: 8px;
+  background: #118352;
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  color: #FFFFFF;
+  /*!* Inside Auto Layout *!*/
+  /*flex: none;*/
+  /*order: 0;*/
+  /*flex-grow: 0;*/
+  /*margin: 0px 10px;*/
+
+}
+
+.edit-icon {
+  padding-right: 15px;
+  color: rgba(255, 183, 66, 0.9);
+}
+
+.detail-icon{
+  padding-left: 15px;
+}
+
+.approve-icon{
+  padding-right: 15px!important;
+  font-weight: bold;
+  color: #41BBFF;
+}
+
+.approve-icon-disable{
+  padding-right: 15px!important;
+  font-weight: bold;
+  color: #ff9e013d;
+}
+
+
+
+.add-icon{
+  padding-right: 15px;
+}
+
+
+
+.btn-edit {
+  background: #fedda7!important;
+  color: #915900!important;
+  border-radius: 15px!important;
+}
+
+.btn-add {
+  background: #8c29ef1f!important;
+  color:#8C29EF!important;
+  border-radius: 15px!important;
+}
+
+.btn-approve {
+  background: #bcdff1!important;
+  color: #1C8FCF!important;
+  border-radius: 15px!important;
+}
+
+
+

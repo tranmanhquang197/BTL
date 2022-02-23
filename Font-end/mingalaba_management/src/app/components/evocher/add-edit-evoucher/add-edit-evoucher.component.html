@@ -1,0 +1,59 @@
+<form [formGroup]='addEditForm' class='form evoucher' style='margin: 0px 1rem'>
+
+    <fieldset style='box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08) !important;'>
+        <div fxLayout='row wrap' class='row-wrap-padding' fxLayoutAlign='center start'>
+            <legend style='margin-bottom: 30px !important;' fxLayout='row' fxFlex='100%'
+                    fxFlex.lt-md='100%'>{{'Product type Info' | translate}}</legend>
+
+
+            <ns-upload-file name='image'
+                            formControlName='image'
+                            [label]="'Image'"
+                            [required]='true'
+                            [defaultUrl]="{url: null, name: ' ', type: 'image/png'}"
+                            [accept]='[FileTypes.PNG, FileTypes.JPG]'
+                            fxLayout='column' fxFlex='45%'
+                            fxFlex.lt-md='100%'
+                            (onFileChange)='onFileChange($event)'>
+            </ns-upload-file>
+            <div fxFlex='45%' fxFlex.lt-md='100%'></div>
+            <ns-input name='title' fxLayout='column' fxFlex='45%' fxFlex.lt-md='100%'
+                      formControlName='name'
+                      [disabled]='false'
+                      [isLabelOutside]='true'
+                      [required]='true'
+                      [placeholder]="'Name'"
+
+            ></ns-input>
+            <ns-input  fxLayout='column' fxFlex='45%' fxFlex.lt-md='100%'
+                      formControlName='description'
+                      [disabled]='false'
+                      [isLabelOutside]='true'
+                      [placeholder]="'Description'"
+
+            ></ns-input>
+        </div>
+    </fieldset>
+    <!--/  VOUCHER DETAIL INFO-->
+
+    <!--    VOUCHER DISTRIBUTE INFO-->
+
+    <!--/    VOUCHER DISTRIBUTE INFO-->
+
+    <!--  Button Footer-->
+    <div class='acbox_footer btn-sec no-margin'
+         style='  position: fixed; bottom: 0; right: 3px; display: flex; justify-content: center'>
+        <div>
+            <button mat-button
+                    (click)='onSave()'
+                    style='width: 350px'
+                    [disabled]='addEditForm.invalid'
+                    class='primary'>
+                {{(isEdit ? 'evoucher.button.save' : 'evoucher.button.create') | translate}}
+            </button>
+        </div>
+    </div>
+    <!--/  Button Footer-->
+</form>
+
+

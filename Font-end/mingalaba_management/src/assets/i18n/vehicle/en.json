@@ -1,0 +1,13 @@
+{
+    "vehicle": {
+        "text_search": "License plate",
+        "status": "Status",
+        "tonnage": "Tonnage",
+        "vehicle_type": "Vehicle type",
+        "run_date": "Run date",
+        "table": {
+            "stt": "No",
+            "name": "License plate"
+        }
+    }
+}

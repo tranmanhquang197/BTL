@@ -1,0 +1,40 @@
+.customer-care{
+  .voucher-title-size {
+    max-width: 10rem !important;
+
+  }
+
+  .voucher-title-size div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block !important;
+
+  }
+
+  .banner-image {
+    max-width: 7rem !important;
+  }
+
+  .ns-table .img-view.viewData img {
+    width: 150px !important;
+    object-fit: cover;
+  }
+
+  fieldset legend {
+    color: #118352 !important;
+  }
+
+  .label-pos {
+    mat-label {
+      display: none !important;
+    }
+  }
+  .download-template{
+    display: none !important;
+  }
+  .cdk-column-address{
+    width: 31% !important;
+  }
+
+}

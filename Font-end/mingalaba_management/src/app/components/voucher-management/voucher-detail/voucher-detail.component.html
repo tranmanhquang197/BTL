@@ -1,0 +1,143 @@
+<div [formGroup]='form' class = "voucher-detail" fxLayout='row wrap' fxLayout.lt-md='column'>
+
+  <div fxLayout='row' fxFlex='100%'>
+    <div fxLayout='column' fxFlex='60%'>
+      <div fxLayout='row' fxFlex='100%' class='acbox row-wrap-padding'>
+        <fieldset>
+          <legend style='color:#118352 !important;'>{{'Product info' | translate}}</legend>
+          <div fxLayout='row-wrap' class='row-wrap-padding padding-content'>
+            <div fxLayout='column' fxFlex='100%'>
+              <div fxLayout='row wrap' fxLayoutAlign="space-between">
+            <ns-input-view [label]="'Name'"
+                           [text]="voucher?.name"
+                           fxLayout='column' fxFlex='50%'
+                           fxFlex.lt-md='100%'>
+            </ns-input-view>
+            <ns-input-view [label]="'Price'"
+                           [text]="voucher?.price"
+                           fxLayout='column' fxFlex='50%'
+                           fxFlex.lt-md='100%'>
+            </ns-input-view>
+            <ns-input-view [label]="'Product type'"
+                           [text]="voucher?.productTypes"
+                           fxLayout='column' fxFlex='50%'
+                           fxFlex.lt-md='100%'>
+            </ns-input-view>
+            <ns-input-view [label]="'Status'"
+                           [text]="voucher?.status"
+                           fxLayout='column' fxFlex='50%'
+                           fxFlex.lt-md='100%'>
+            </ns-input-view>
+                <div fxLayout="row" fxFlex='100%'  style = "margin-left:7px" class ="padding-20">
+                  <div fxFlex="20.5%" class="field_name_custom">Description</div>
+                  <div fxFlex="79.5%" class="field_content_custom">{{voucher?.description}}</div>
+                </div>
+<!--            <ns-input-view [label]="'Quantity'"-->
+<!--                           [text]="'150'"-->
+<!--                           fxLayout='column' fxFlex='50%'-->
+<!--                           fxFlex.lt-md='100%'>-->
+<!--            </ns-input-view>-->
+<!--            <ns-input-view [label]="'Rest'"-->
+<!--                           [text]="'10'"-->
+<!--                           fxLayout='column' fxFlex='50%'-->
+<!--                           fxFlex.lt-md='100%'>-->
+<!--            </ns-input-view>-->
+
+          </div>
+          </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+    </div>
+
+    <div fxLayout='column' class='acbox ' fxFlex='39%' fxFlex.lt-md='100%' ngClass.gt-sm='margin-left-20'>
+      <div style='padding: 32px 32px 0 32px'>
+        <div style='width: 100%; height: 200px; display: flex; justify-content: center'>
+          <nz-image-group>
+            <div style = "width:270px;height:125px;border: 1px solid #efeaea;margin:0 auto 2px auto;">
+              <img nz-image width="270px" style = "object-fit: cover" height = "125px" nzSrc="{{image1}}" alt="" />
+            </div>
+            <div style = " width:270px;height:125px;border: 1px solid #efeaea;margin: 0 auto 27px auto;display: flex;">
+              <div style = "width: 50%;border-right: 1px solid #efeaea;">
+                <img nz-image width="135px" style = "object-fit: cover" height = "125px" nzSrc="{{image2}}" alt="" />
+              </div>
+              <div style = "width: 50%">
+                <img nz-image width="135px" style = "object-fit: cover" height = "125px" nzSrc="{{image3}}" alt="" />
+              </div>
+            </div>
+          </nz-image-group>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class='acbox row-wrap-padding' fxFlex='100%'>
+    <fieldset>
+      <legend
+        style='color:#118352 !important;'>{{'Business info' | translate}}</legend>
+      <div fxLayout='row-wrap' class='row-wrap-padding padding-content'>
+        <div fxLayout='column' fxFlex='100%'>
+          <div fxLayout='row wrap' fxLayoutAlign="space-between">
+            <ns-input-view [label]="'Total number'"
+                           [text]="voucher?.count"
+                           fxLayout='column' fxFlex='33.3%'
+                           fxFlex.lt-md='100%'>
+            </ns-input-view>
+            <ns-input-view [label]="'Sell number'"
+                           [text]="voucher?.count"
+                           fxLayout='column' fxFlex='33.3%'
+                           fxFlex.lt-md='100%'>
+            </ns-input-view>
+            <ns-input-view [label]="'Rest'"
+                           [text]="voucher?.rest"
+                           fxLayout='column' fxFlex='33.3%'
+                           fxFlex.lt-md='100%'>
+            </ns-input-view>
+
+            <!--            <ns-input-view [label]="'Quantity'"-->
+            <!--                           [text]="'150'"-->
+            <!--                           fxLayout='column' fxFlex='50%'-->
+            <!--                           fxFlex.lt-md='100%'>-->
+            <!--            </ns-input-view>-->
+            <!--            <ns-input-view [label]="'Rest'"-->
+            <!--                           [text]="'10'"-->
+            <!--                           fxLayout='column' fxFlex='50%'-->
+            <!--                           fxFlex.lt-md='100%'>-->
+            <!--            </ns-input-view>-->
+
+          </div>
+        </div>
+      </div>
+
+
+
+    </fieldset>
+  </div>
+
+  <div class='acbox_footer btn-sec no-margin'>
+    <div class='btn-footer'>
+<!--      <button mat-button-->
+<!--              class='btn-action btn-add' (click)='addNewVoucher()'>-->
+<!--        <mat-icon class='add-icon'>add_circle</mat-icon>-->
+<!--        {{'voucher-management.button.addNew' | translate}}-->
+<!--      </button>-->
+      <button mat-button class='btn-action btn-edit' (click)='editVoucher()'>
+        <mat-icon  class='edit-icon'> border_color
+        </mat-icon>
+        <span>{{'voucher-management.button.edit' | translate}}</span>
+      </button>
+<!--      <button mat-button [ngStyle]="{'opacity':disableApproveButton() === true ? '0.7' : '1' }"-->
+<!--              class='btn-action btn-approve' (click)='approveVoucher(data.id)' [disabled]='disableApproveButton()'>-->
+<!--        <mat-icon [ngStyle]="{'opacity':disableApproveButton() === true ? '0.3' : '1' }" class='approve-icon'> done</mat-icon>-->
+<!--        <span-->
+<!--          [ngStyle]="{'opacity':disableApproveButton() === true ? '0.3' : '1' }"> {{'voucher-management.button.approve' | translate}}</span>-->
+<!--      </button>-->
+    </div>
+
+  </div>
+
+</div>

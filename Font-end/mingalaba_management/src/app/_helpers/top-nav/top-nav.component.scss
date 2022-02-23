@@ -1,0 +1,245 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.mat-select-theme {
+  display: inline-block;
+  width: 80px;
+  outline: 0;
+}
+
+.mat-select-arrow {
+  visibility: hidden;
+}
+
+.mat-select-language {
+  display: inline-block;
+  width: 50px;
+  outline: 0;
+}
+.logo {
+  width: 100%;
+  display: inline-block;
+}
+
+.vi{
+  background:  url("../../../assets/Flags/vi.ico")  center / contain no-repeat;
+  white-space: nowrap;
+}
+.en{
+  background:  url("../../../assets/Flags/en.ico")  center / contain no-repeat;
+  white-space: nowrap;
+}
+.usermenu{
+  a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    color: inherit;
+  }
+}
+.top-menu{
+  a{
+    text-decoration: none;
+    font-style: inherit;
+    padding-left: 15px;
+    color: #00977D;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  a:hover{
+    color: #abd7c3;
+    text-underline: thick;
+  }
+  margin-left: 150px;
+}
+.usermenu{
+  a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    color: inherit;
+  }
+}
+.logo-image{
+  height: 90%;
+  width: auto;
+}
+
+
+.notification {
+  float: right;
+  margin-right: 28px;
+  margin-left: 18px;
+  cursor: pointer;
+}
+
+/*
+.mat-select-theme {
+  width: 0%!important;
+}
+.theme_select .mat-select-theme {
+  width: 0%!important;
+}
+*/
+.chat {
+  float: right;
+  color: #00977D;
+  cursor: pointer;
+}
+
+.red {
+  font-weight: 900;
+  position: absolute;
+  top: 2px;
+  right: -3px;
+  color: red;
+  font-size: 11px;
+}
+
+.fa-bell {
+  color: #00977D;
+}
+
+.notification_dd {
+  margin: 0;
+  padding: 0;
+  right: 15px;
+  display: block;
+  position: fixed;
+  background: #FFFFFF;
+  box-shadow: 6px 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  max-height: 65vh;
+  overflow: hidden;
+}
+.notification_dd:hover {
+  overflow: auto;
+}
+
+.notification_ul {
+  margin: 0;
+  padding: 0;
+}
+.notification_dd:before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 22px;
+  border: 10px solid;
+  border-color: transparent transparent #fff transparent;
+}
+
+.notification_dd li {
+  border-bottom: 1px solid #f1f2f4;
+  padding: 12px 22px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+  background-color: white;
+}
+
+.notification_dd li:hover {
+  background-color: rgba(1, 1, 2, 0.08);
+}
+
+.notification_dd li .notify_icon {
+  display: flex;
+}
+
+.notification_dd li .notify_icon .icon {
+  display: inline-block;
+  //background: url('/assets/document.svg') no-repeat 0 0;
+  width: 40px;
+  height: 42px;
+}
+
+.notification_dd li.baskin_robbins .notify_icon .icon {
+  background-position: 0 -43px;
+}
+
+.notification_dd li.mcd .notify_icon .icon {
+  background-position: 0 -86px;
+}
+
+.notification_dd li.pizzahut .notify_icon .icon {
+  background-position: 0 -129px;
+}
+
+.notification_dd li.kfc .notify_icon .icon {
+  background-position: 0 -178px;
+}
+
+.notification_dd li .notify_data {
+  margin: 0 15px;
+  width: 250px;
+}
+
+.notification_dd li .footer-li {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #00977D;
+  margin-left: 15px;
+}
+
+.notification_dd li .body-li {
+  display: flex;
+  flex-direction: column;
+}
+
+.notification_dd li .notify_data .title {
+  color: #000;
+}
+
+.notification_dd li .notify_data .sub_title {
+  white-space: break-spaces;
+  overflow: hidden;
+  margin-top: 5px;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 100;
+  color: #000000;
+}
+
+.notification_dd li .notify_status p {
+  font-size: 12px;
+}
+
+.notification_dd li.success .notify_status p {
+  color: #47da89;
+}
+
+.notification_dd li.failed .notify_status p {
+  color: #fb0001;
+}
+
+.notification_dd li.show_all {
+  display: flex;
+  justify-content: center;
+}
+
+.notification_dd li.show_all p {
+  font-weight: 700;
+  color: #3b80f9;
+  cursor: pointer;
+}
+
+.notification_dd li.show_all p:hover {
+  text-decoration: underline;
+}
+
+.notification_dd {
+  display: block;
+}
+
+.no {
+  display: none;
+}
+

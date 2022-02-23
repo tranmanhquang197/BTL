@@ -1,0 +1,172 @@
+{
+  "promotion": {
+    "warning.distributor.update": "This action will also remove all levels of the promotion, are you sure?",
+    "delete.level.fail": "Delete all levels fail",
+    "delete.level.done": "Delete all levels success",
+    "view": "Promotion detail",
+    "responsible.distributor": "Distributor paid promotion reward?",
+    "param": "promotion",
+    "table.header": {
+      "stt": "No.",
+      "clientId": "Application",
+      "type": "Type",
+      "code": "Code",
+      "name": "Name",
+      "fromDate": "From",
+      "toDate": "To",
+      "status": "Status"
+    },
+    "status": {
+      "all": "All",
+      "draft": "Draft",
+      "accept": "Approved",
+      "reject": "Rejected"
+    },
+    "basic": {
+      "info": "Basic info"
+    },
+    "apply.for": {
+      "manufacturer": "Manufacturer",
+      "distributor": "Distributor",
+      "store": "Store",
+      "township": "Township"
+    },
+    "add.edit": {
+      "image": "Promotion image*",
+      "clientId": "Application",
+      "promotionType": "Promotion type",
+      "type": "Type",
+      "display.type": "Display type",
+      "code": "Code",
+      "name": "Name",
+      "fromDate": "From",
+      "toDate": "To",
+      "status": "Status",
+      "maximumNumberOfTurns": "Maximum number of turns",
+      "maximumNumberOfTurnsHint": "Not ready for calculate",
+      "description": "Description",
+      "manufacturers": "Choose a manufacturer",
+      "distributors": "Choose a distributor",
+      "townships": "Choose townships",
+      "stores": "Choose a store",
+      "merchant": "Choose merchants",
+      "productPackingCodes": "Product packing",
+      "flash.sale": "Flash sale range time",
+      "coupon": "Coupon",
+      "apply.for.package": "Apply for package",
+      "table.header": {
+        "manufacturerCode": "Manufacturer code",
+        "manufacturerName": "Manufacturer name",
+        "distributorCode": "Distributor code",
+        "distributorName": "Distributor name",
+        "storeCode": "Store code",
+        "storeName": "Store name",
+        "code": "Level code",
+        "description": "Description",
+        "productPackingCode": "Pack ID",
+        "minQuantity": "Min quantity",
+        "maxQuantity": "Max quantity",
+        "username": "Username",
+        "maximumNumberOfTurns": "Quantity coupon",
+        "townshipCode": "Township code",
+        "townshipName": "Township name",
+        "country": "Country",
+        "region": "Region",
+        "district": "District"
+      },
+      "note": {
+        "manufacturer": "*Note: No choose for all or choose some specified of manufacturers",
+        "store": "*Note: No choose for all or choose some specified of stores"
+      },
+      "add": {
+        "confirm": "Are you sure?",
+        "success": "Add successed"
+      },
+      "edit": {
+        "confirm": "Are you sure?",
+        "success": "Edit successed"
+      },
+      "level.revenue": {
+        "operation": "Operation",
+        "minQuantityBundle": "Min quantity",
+        "maxQuantityBundle": "Max quantity",
+        "minRevenue": "Min revenue",
+        "maxRevenue": "Max revenue"
+      }
+    },
+    "level": {
+      "param": "promotion level",
+      "detail.param": "promotion level detail",
+      "": "Levels",
+      "group": {
+        "code": "Code",
+        "description": "Description",
+        "promotionLevelGroupSell": "Sell group",
+        "promotionLevelGroupReward": "Reward group",
+        "sell": {
+          "minQuantity": "Min quantity",
+          "minAmount": "Min amount",
+          "promotionLevelGroupSell": "Sell group",
+          "table.header": {
+            "productPackingCode": "Pack ID",
+            "quantity": "Quantity",
+            "amount": "Amount"
+          }
+        },
+        "reward": {
+          "maxQuantity": "Max quantity",
+          "maxAmount": "Max amount",
+          "percent": "Percent",
+          "promotionLevelGroupReward": "Reward group",
+          "table.header": {
+            "productPackingCode": "Pack ID",
+            "quantity": "Quantity",
+            "price": "Price",
+            "amount": "Amount"
+          }
+        }
+      }
+    },
+    "promotion": {
+      "all": "All",
+      "line": {
+        "quantity.free.item": "PROMOTION_LINE_QUANTITY_FREEITEM",
+        "quantity.amount": "PROMOTION_LINE_QUANTITY_AMOUNT",
+        "quantity.percent": "PROMOTION_LINE_QUANTITY_PERCENT",
+        "amount.free.item": "PROMOTION_LINE_AMOUNT_FREEITEM",
+        "amount.amount": "PROMOTION_LINE_AMOUNT_AMOUNT",
+        "amount.percent": "PROMOTION_LINE_AMOUNT_PERCENT"
+      },
+      "group": {
+        "quantity.free.item": "PROMOTION_GROUP_QUANTITY_FREEITEM",
+        "quantity.amount": "PROMOTION_GROUP_QUANTITY_AMOUNT",
+        "quantity.percent": "PROMOTION_GROUP_QUANTITY_PERCENT",
+        "amount.free.item": "PROMOTION_GROUP_AMOUNT_FREEITEM",
+        "amount.amount": "PROMOTION_GROUP_AMOUNT_AMOUNT",
+        "amount.percent": "PROMOTION_GROUP_AMOUNT_PERCENT"
+      },
+      "bundle": {
+        "quantity.free.item": "PROMOTION_BUNDLE_QUANTITY_FREEITEM",
+        "quantity.amount": "PROMOTION_BUNDLE_QUANTITY_AMOUNT",
+        "quantity.percent": "PROMOTION_BUNDLE_QUANTITY_PERCENT",
+        "amount.free.item": "PROMOTION_BUNDLE_AMOUNT_FREEITEM",
+        "amount.amount": "PROMOTION_BUNDLE_AMOUNT_AMOUNT",
+        "amount.percent": "PROMOTION_BUNDLE_AMOUNT_PERCENT"
+      },
+      "order": {
+        "quantity.free.item": "PROMOTION_ORDER_QUANTITY_FREEITEM",
+        "quantity.amount": "PROMOTION_ORDER_QUANTITY_AMOUNT",
+        "quantity.percent": "PROMOTION_ORDER_QUANTITY_PERCENT",
+        "amount.free.item": "PROMOTION_ORDER_AMOUNT_FREEITEM",
+        "amount.amount": "PROMOTION_ORDER_AMOUNT_AMOUNT",
+        "amount.percent": "PROMOTION_ORDER_AMOUNT_PERCENT"
+      }
+    },
+    "coupon.username": {
+      "is.existed": "Username is existed",
+      "is.required": "Username is not empty",
+      "pattern": "This value is incorrect format"
+    }
+  }
+}
+

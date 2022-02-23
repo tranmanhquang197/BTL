@@ -1,0 +1,47 @@
+<ns-breadcrumb></ns-breadcrumb>
+<div class="searchFormGroup">
+  <form [formGroup]="searchForm" (ngSubmit)="search()" class="acbox">
+    <div fxLayout="row wrap" class="row-wrap-padding">
+      <div class="form_title">{{'user-management.heading.title' | translate}}</div>
+      <ns-input formControlName="displayName"
+                [placeholder]="'user-management.table.header.displayName'"
+                [isLabelOutside]="true" fxLayout="column" fxFlex="50%" fxFlex.lt-md="100%">
+      </ns-input>
+      <ns-input formControlName="phoneNumber"
+                [placeholder]="'user-management.table.header.phoneNumber'"
+                [isLabelOutside]="true" fxLayout="column" fxFlex="50%" fxFlex.lt-md="100%">
+      </ns-input>
+      <ns-multi-select-autocomplete [isLabelOutside]="true"
+                                    formControlName="status"
+                                    [options]="statusOptions"
+                                    [multiple]="false"
+                                    fxLayout="column" fxFlex="50%" fxFlex.lt-md="100%"
+                                    [placeholder]="'user-management.table.header.status'">
+      </ns-multi-select-autocomplete>
+      <ns-multi-select-autocomplete [isLabelOutside]="true"
+                                    formControlName="type"
+                                    [options]="typeSelectOptions"
+                                    [multiple]="false"
+                                    fxLayout="column" fxFlex="50%" fxFlex.lt-md="100%"
+                                    [placeholder]="'user-management.table.header.typeUser'">
+      </ns-multi-select-autocomplete>
+      <div fxLayout="column" fxFlex="100%">
+        <div class="buttonArea left">
+          <button mat-button type="submit" class="primary">
+            {{'btnSearch'|translate}}
+          </button>
+          <button mat-button type="button" class="secondary outline" (click)="resetSearchFormValue()">
+            {{'btnReset'|translate}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+  <div class="acbox">
+    <ns-table [columns]="columns" [buttons]="button" *ngIf="searchForm.valid"
+              [paging]="paging" (pagingChange)="pagingChange($event)"
+              [moduleName]="moduleName" [results]="results"
+              (clickAction)="onRowButtonClick($event)">
+    </ns-table>
+  </div>
+</div>

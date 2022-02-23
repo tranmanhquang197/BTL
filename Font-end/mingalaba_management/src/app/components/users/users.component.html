@@ -1,0 +1,74 @@
+<div class='searchFormGroup users'>
+    <form [formGroup]='searchForm' (ngSubmit)='search()' class='acbox'
+          style='box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.06);'>
+        <div fxLayout='row wrap' fxLayoutAlign="space-between" class='row-wrap-padding'>
+            <div class="form_title">{{'users.heading.title' |translate}}</div>
+            <ns-input formControlName='name'
+                      [placeholder]="'users.table.header.name'"
+                      [isLabelOutside]='true' fxLayout='column' fxFlex='45%' fxFlex.lt-md='100%'>
+            </ns-input>
+            <ns-input formControlName='phone'
+                      [placeholder]="'users.table.header.phone'"
+                      [patternFilter]="'^[0-9]*$'"
+                      [isLabelOutside]='true' fxLayout='column' fxFlex='45%' fxFlex.lt-md='100%'>
+            </ns-input>
+            <ns-multi-select-autocomplete [isLabelOutside]='true'
+                                          formControlName='status'
+                                          [options]='statusOptions'
+                                          [multiple]='false'
+                                          fxLayout='column' fxFlex='45%' fxFlex.lt-md='100%'
+                                          [placeholder]="'users.heading.status'">
+            </ns-multi-select-autocomplete>
+            <ns-multi-select-autocomplete [isLabelOutside]='true'
+                                          formControlName='role'
+                                          [options]='roleOptions'
+                                          [multiple]='false'
+                                          fxLayout='column' fxFlex='45%' fxFlex.lt-md='100%'
+                                          [placeholder]="'users.heading.role'">
+            </ns-multi-select-autocomplete>
+
+            <div fxLayout='column' fxFlex='100%'>
+                <div fxLayout='row wrap' fxLayoutAlign="space-between">
+                    <div fxFlex="50%">
+                        <!--            background-color: #00977D;-->
+                        <!--            color: white;-->
+                    </div>
+                    <div fxFlex="50%">
+                        <div style="float: right">
+                            <button mat-button type='submit' class='primary'>
+                                {{'btnSearch'|translate}}
+                            </button>
+                            <button mat-button type='button' class='secondary outline' (click)='resetSearchFormValue()'>
+                                {{'btnReset' |translate}}
+                            </button>
+                        </div>
+
+                        <!--          "btnUpload": "Upload excel",-->
+                        <!--          "btnExportTemplate": "Export template",-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class='result-area margin-bottom-20' fxLayout="row">
+              <div fxFlex="50%">
+                  <h3 class='margin-0'>{{('total.results'| translate) }} {{paging.totalElements}}</h3>
+              </div>
+    </div>
+
+    <div class='acbox' style='box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.06);'>
+<!--        <ns-table [columns]='columns' [buttons]='buttons' *ngIf='searchForm.valid'-->
+<!--                  [paging]='paging' (pagingChange)='pagingChange($event)'-->
+<!--                  [moduleName]='moduleName' [results]='results'-->
+<!--                  (onRowClickAction)="onRowClickAction($event)"-->
+<!--                  (clickAction)='onRowButtonClick($event)'>-->
+<!--        </ns-table>-->
+        <ns-table [columns]='columns' [buttons]='buttons' *ngIf='searchForm.valid'
+                  [paging]='paging' (pagingChange)='pagingChange($event)'
+                  [moduleName]='moduleName' [results]='results'
+                  (onRowClickAction)="onRowClickAction($event)"
+                  (clickAction)='onRowButtonClick($event)'>
+        </ns-table>
+    </div>
+</div>
+

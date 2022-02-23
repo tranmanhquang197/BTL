@@ -1,0 +1,67 @@
+<div class='searchFormGroup customer-care'>
+    <form [formGroup]='searchForm' (ngSubmit)='search()' class='acbox'
+          style='box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.06);'>
+        <div fxLayout='row wrap' fxLayoutAlign="space-between" class='row-wrap-padding'>
+            <!--      <div class="form_title">{{'customer-care.heading.title' }}</div>-->
+            <ns-input formControlName='namePhone'
+                      [placeholder]="'customer-care.table.header.name_phone'"
+                      [isLabelOutside]='true' fxLayout='column' fxFlex='45%' fxFlex.lt-md='100%'>
+            </ns-input>
+            <ns-input formControlName='address'
+                      [placeholder]="'customer-care.table.header.address'"
+                      [isLabelOutside]='true' fxLayout='column' fxFlex='45%' fxFlex.lt-md='100%'>
+            </ns-input>
+            <ns-multi-select-autocomplete [isLabelOutside]="true"
+                                          formControlName="userSystem"
+                                          [options]="statusUserSystemOptions"
+                                          [multiple]="false"
+                                          fxLayout="column" fxFlex="45%" fxFlex.lt-md="100%"
+                                          [placeholder]="'customer-care.table.header.user-system'">
+            </ns-multi-select-autocomplete>
+
+            <div fxLayout='column' fxFlex='100%'>
+                <div fxLayout='row wrap' fxLayoutAlign="space-between">
+                    <div fxFlex="50%">
+                        <!--            background-color: #00977D;-->
+                        <!--            color: white;-->
+                    </div>
+                    <div fxFlex="50%">
+                        <div style="float: right">
+                            <button mat-button type='submit' class='primary'>
+                                {{'btnSearch'|translate}}
+                            </button>
+                            <button mat-button type='button' class='secondary outline' (click)='resetSearchFormValue()'>
+                                {{'btnReset' |translate}}
+                            </button>
+                        </div>
+
+                        <!--          "btnUpload": "Upload excel",-->
+                        <!--          "btnExportTemplate": "Export template",-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class='result-area margin-bottom-20' fxLayout="row">
+        <div fxFlex="50%">
+            <h3 class='margin-0'>{{('total.results'| translate) }} {{paging.totalElements}}</h3>
+        </div>
+        <div fxFlex="50%">
+            <button style="float:right" mat-button type='button' class='outline' (click)='onFileSelect()'>
+                <i class="fas fa-cloud-upload-alt"></i> {{'btnUpload' |translate}}
+            </button>
+            <button mat-button type='button' style="float:right;" class='outline' (click)="onExportExcel()">
+                <i class="fas fa-download"></i> {{'btnExportTemplate' |translate}}
+            </button>
+        </div>
+    </div>
+
+    <div class='acbox' style='box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.06);'>
+        <ns-table [columns]='columns' [buttons]='button' *ngIf='searchForm.valid'
+                  [paging]='paging' (pagingChange)='pagingChange($event)'
+                  [moduleName]='moduleName' [results]='results'
+                  (clickAction)='onRowButtonClick($event)'>
+        </ns-table>
+    </div>
+</div>
+

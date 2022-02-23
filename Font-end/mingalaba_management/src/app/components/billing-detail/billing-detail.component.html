@@ -1,0 +1,93 @@
+<app-header></app-header>
+<div class = "billing-detail">
+    <div  fxLayout="row wrap"fxFlex="100%" >
+        <div class = "detail" fxFlex="50%">
+            <div class = "header-title">
+                <h2>Billing Details</h2>
+            </div>
+            <form [formGroup]="searchForm"  fxLayout="row wrap" fxLayoutAlign="space-between center">
+                <ns-input formControlName="firstName"
+                          [placeholder]="'First Name'"
+                          [required]="true"
+                          [isLabelOutside]="false" fxLayout="column" fxFlex="49%" fxFlex.lt-md="100%">
+                </ns-input>
+                <ns-input formControlName="lastName"
+                          [required]="true"
+                          [placeholder]="'Last Name'"
+                          [isLabelOutside]="false" fxLayout="column" fxFlex="49%" fxFlex.lt-md="100%">
+                </ns-input>
+                <ns-input formControlName="mail"
+                          [required]="true"
+                          [placeholder]="'Mail'"
+                          [isLabelOutside]="false" fxLayout="column" fxFlex="49%" fxFlex.lt-md="100%">
+                </ns-input>
+                <ns-input formControlName="phone"
+                          [required]="true"
+                          [placeholder]="'Phone'"
+                          [patternFilter]="'^[0-9]*$'"
+                          [isLabelOutside]="false" fxLayout="column" fxFlex="49%" fxFlex.lt-md="100%">
+                </ns-input>
+                <ns-input formControlName="provice"
+                          [required]="true"
+                          [placeholder]="'Provice'"
+                          [isLabelOutside]="false" fxLayout="column" fxFlex="49%" fxFlex.lt-md="100%">
+                </ns-input>
+                <ns-input formControlName="district"
+                          [required]="true"
+                          [placeholder]="'District'"
+                          [isLabelOutside]="false" fxLayout="column" fxFlex="49%" fxFlex.lt-md="100%">
+                </ns-input>
+                <ns-input formControlName="township"
+                          [required]="true"
+                          [placeholder]="'Township'"
+                          [isLabelOutside]="false" fxLayout="column" fxFlex="100%" fxFlex.lt-md="100%">
+                </ns-input>
+                <ns-input formControlName="address"
+                          [required]="true"
+                          [placeholder]="'Address'"
+                          [isLabelOutside]="false" fxLayout="column" fxFlex="100%" fxFlex.lt-md="100%">
+                </ns-input>
+                <div fxFlex="100%">
+                    <button [disabled]="searchForm?.invalid"  (click) = "order()"  class="btn-project mat-focus-indicator mat-raised-button mat-button-base mat-primary" color="primary" mat-raised-button="" type="submit">
+                        <span class="mat-button-wrapper">Order</span>
+                        <span class="mat-button-ripple mat-ripple" matripple=""></span>
+                        <span class="mat-button-focus-overlay"></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class = "mainOrder-wrapper padding-left-15" fxFlex="50%">
+            <div class = "main-order">
+                <div class = "order-box">
+                    <div class="title-box">
+                        <div>
+                        Product
+                            <span>Total</span>
+                        </div>
+                        <ul class = "price-list">
+                            <li *ngFor="let item of listProduct">
+                                {{item.name}}
+                                <span>{{ item.price }} VNĐ</span>
+                            </li>
+                        </ul>
+                        <ul class = "total">
+                            <li>Total
+                                <span class = "count">
+                                    {{total}} VNĐ
+                                </span>
+                            </li>
+                        </ul>
+<!--                        <div class = "order">-->
+<!--                            <button  class="btn-project mat-focus-indicator mat-raised-button mat-button-base mat-primary" color="primary" mat-raised-button="" type="submit">-->
+<!--                                <span class="mat-button-wrapper">PLACE ORDER</span>-->
+<!--                                <span class="mat-button-ripple mat-ripple" matripple=""></span>-->
+<!--                                <span class="mat-button-focus-overlay"></span>-->
+<!--                            </button>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,72 @@
+<div class="header">
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="left" fxLayout="row">
+            <div class="button">USD<span style="margin-left:10px"><i class="fas fa-caret-down"></i></span></div>
+            <div class="button margin-left-20">
+                <img style="width:20px;height: 20px;"
+                     src="http://lazeapostolski.com/sophia-ecommerce/assets/images/flags/gb.svg">
+                English
+                <span style="margin-left:10px"><i class="fas fa-caret-down"></i></span>
+            </div>
+        </div>
+
+        <div class="right" fxLayout="row">
+            <div class="button"><i class="far fa-heart"></i><span style="margin-left:5px"> WISHLIST</span></div>
+            <div class="button"><i class="fas fa-circle-notch"></i><span style="margin-left:5px"> COMPARE</span></div>
+            <div class="button"><i class="fas fa-user"></i><a style="margin-left:5px"> MyAccount</a></div>
+        </div>
+    </div>
+</div>
+<div class="search">
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="left" fxLayout="row">
+            <img routerLink="/home" style="width:140px;height: 40px;margin-left: 100px"
+                 src="http://lazeapostolski.com/sophia-ecommerce/assets/images/logo-white.png">
+            <div class="search-form" fxLayout="row">
+                <form [formGroup]="searchForm" (ngSubmit)="onSubmit()" class="search-form" fxLayout="row">
+                    <div class="form-wrap">
+                        <input formControlName="name"  placeholder="Type to search..." type="text">
+                        <button class="btn-search" type="submit">
+                            Search
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="right" fxLayout="row">
+            <div class="help-phone" fxLayout="row" fxlayoutalign="center center">
+                <div class="icon" fxLayout="row">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="info-text">
+                    <p>Helpline:</p>
+                    <span>0982866238</span>
+                </div>
+            </div>
+            <div class="commerce-buttons" fxLayout="row" fxLayoutAlign="end center">
+                <div style="cursor: pointer;" routerLink="/shopping-cart" fxLayoutAlign="space-between center">
+                    <span class="mat-button-wrapper">
+                        <div>
+                            <div style="position: relative;" class="mat-button-wrapper">
+                                <i style="font-size:35px" class="fas fa-shopping-cart"></i>
+                                <span class="cart-count-wrapper">{{ add }}</span>
+                            </div>
+                        </div>
+                        <div class="top-cart">
+                            <span>$200</span>
+                        </div>
+                    </span>
+                </div>
+            </div>
+
+            <!--            <div class = "button"><i class="far fa-heart"></i><span style = "margin-left:5px"> WISHLIST</span></div>-->
+            <!--            <div class = "button"><i class="fas fa-circle-notch"></i><span style = "margin-left:5px"> COMPARE</span></div>-->
+            <!--            <div class = "button"><i class="fas fa-user"></i><a style = "margin-left:5px"> MyAccount</a></div>-->
+        </div>
+    </div>
+</div>
+<div class="nav-product-type" style = "display: flex">
+    <img style="height:62px;margin: 0 auto" src="/assets/files/nav.png">
+</div>

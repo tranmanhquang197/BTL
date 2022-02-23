@@ -1,0 +1,12 @@
+{
+  "warehouse": {
+    "table": {
+      "header": {
+        "warehouse_code": "Mã kho hàng",
+        "warehouse_name": "Tên kho hàng",
+        "warehouse_address": "Địa chỉ"
+      }
+    }
+  }
+}
+

@@ -1,0 +1,46 @@
+{
+  "level": {
+    "button": {
+      "create": "Create level"
+    },
+    "label": {
+      "status": "Status"
+    },
+    "title": {
+      "basic.info": "Basic info"
+    },
+    "param": "level",
+    "status": {
+      "all": "All",
+      "draft": "Draft",
+      "accept": "Accepted",
+      "reject": "Rejected"
+    },
+    "table.header": {
+      "stt": "#",
+      "clientId": "Application",
+      "clazz": "Level",
+      "segment": "Segment",
+      "code": "Code",
+      "name": "Name",
+      "status": "Status",
+      "description": "Description"
+    },
+    "add.edit": {
+      "level": "Level",
+      "segment": "Segment",
+      "code": "Code",
+      "name": "Name",
+      "description": "Description",
+      "reject.reason": "Reject reason",
+      "add": {
+        "confirm": "Do you want to add?",
+        "success": "Add successfully"
+      },
+      "edit": {
+        "confirm": "Do you want to edit?",
+        "success": "Edit successfully"
+      }
+    }
+  }
+}

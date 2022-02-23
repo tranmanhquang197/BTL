@@ -1,0 +1,103 @@
+.users{
+  .voucher-title-size {
+    max-width: 10rem !important;
+
+  }
+
+  .voucher-title-size div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block !important;
+
+  }
+
+  .banner-image {
+    max-width: 7rem !important;
+  }
+
+  .ns-table .img-view.viewData img {
+    width: 150px !important;
+    object-fit: cover;
+  }
+
+  fieldset legend {
+    color: #118352 !important;
+  }
+
+  .label-pos {
+    mat-label {
+      display: none !important;
+    }
+  }
+  .download-template{
+    display: none !important;
+  }
+
+  .cdk-column-avatar{
+    width: 16% !important;
+  }
+
+  .cdk-column-phone{
+    width: 16% !important;
+  }
+
+  .cdk-column-displayname{
+    width: 18% !important;
+  }
+
+  .cdk-column-status{
+    width: 15% !important;
+  }
+
+  .cdk-column-admin{
+    width: 13% !important;
+  }
+
+  .cdk-column-active{
+    width: 4% !important;
+    .mat-warn{
+      background-color: #b0e5b0!important;
+      .fa-eye{
+        color: #009500!important;
+      }
+
+    }
+    .mat-icon-button.danger:hover {
+      border: 1px solid green;
+    }
+  }
+
+  .cdk-column-deactive{
+    width: 4% !important;
+    .mat-warn{
+      background-color: #fceaa6 !important;
+      .fa-eye{
+        color: #ca8115 !important;
+      }
+
+    }
+    .mat-icon-button.danger:hover {
+      border: 1px solid #ca8115;
+    }
+  }
+
+  .cdk-column-recovery{
+    width: 4% !important;
+    .mat-warn{
+      background-color: #fcdfff !important;
+      .fa-key{
+        color: #8C29EF !important;
+      }
+
+    }
+    .mat-icon-button.danger:hover {
+      border: 1px solid #8C29EF;
+    }
+  }
+
+
+
+
+
+}

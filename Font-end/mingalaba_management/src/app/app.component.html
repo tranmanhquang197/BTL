@@ -1,0 +1,10 @@
+<ns-loader [imgSrc]="imgSrc"></ns-loader>
+<app-top-nav class="fixed-topnav"></app-top-nav>
+<mat-sidenav-container [ngClass]="{'non-embbeded': !isEmbedded}" #sideNavContainer autosize>
+  <mat-sidenav #appDrawer mode="side" opened="false" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+    <mat-nav-list>
+      <app-menu-list-item *ngFor="let item of navItems" [item]="item"></app-menu-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>

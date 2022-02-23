@@ -1,0 +1,248 @@
+{
+  "policy": {
+    "confirmApprovePaidReward": "Do you want to approve?",
+    "title": {
+      "DISCOUNT_PERCENT_ORDER_P1": "Basic Discount (by order quantity)",
+      "DISCOUNT_PERCENT_ORDER_P2": "Discount by Stages (by order quantity)",
+      "REACHED_AMOUNT_DISCOUNT_PERCENT_ORDER_P1": "Basic Discount (by order value)",
+      "REACHED_AMOUNT_DISCOUNT_PERCENT_ORDER_P2": "Discount by Stages (by order value)",
+      "INCENTIVE_RATE_AMOUNT_REVENUE": "Buying commission (MMK)",
+      "INCENTIVE_RATE_PERCENT_REVENUE": "Buying commission (%)",
+      "LOYALTY_POINT_AMOUNT_ORDER": "Reward for completing a transaction",
+      "LOYALTY_POINT_AMOUNT_LOGIN": "Reward for daily log-in",
+      "LOYALTY_POINT_AMOUNT_REVIEW_PRODUCT": "Reward for providing feedback",
+      "LOYALTY_POINT_AMOUNT_NETWORK_EXPANSION_L1_L1_NEW_ACTIVATION": "Reward for introducing an active retailer",
+      "LOYALTY_POINT_AMOUNT_NETWORK_EXPANSION_L1_L1_REAL_DEVELOPMENT": "Reward for introducing an real retailer",
+      "LOYALTY_POINT_AMOUNT_NETWORK_EXPANSION_L1_PURCHASE_IN_DAYS": "Reward for making transactions in N consecutive days",
+      "INCENTIVE_RATE_AMOUNT_NETWORK_EXPANSION_L1_L1_NEW_ACTIVATION": "Commission for introducing an active retailer",
+      "INCENTIVE_RATE_AMOUNT_NETWORK_EXPANSION_L1_L1_REAL_DEVELOPMENT": "Commission for introducing a real retailer",
+      "INCENTIVE_RATE_INSTALL_APP_EXISTS_PURCHASE": "Commission for installing application and having transactions",
+      "LOYALTY_POINT_INSTALL_APP_EXISTS_PURCHASE": "Reward for installing application and having transactions",
+      "choose.type": "Choose policy type",
+      "start.create": "Start create policy",
+      "info": "Policy info",
+      "condition": "Policy conditions",
+      "variation": "Policy variations"
+    },
+    "menu.type": {
+      "price": "Price policy",
+      "channel": "Channel policy"
+    },
+    "import": {
+      "success": "Import successfully",
+      "fail.download.detail": "Import unsuccessfully, download error file!"
+    },
+    "confirm": {
+      "import.excel": "Do you want to import file?"
+    },
+    "info": "Policy information",
+    "distributor": "Distributor",
+    "manufacturer": "Manufacturer",
+    "township": "Township",
+    "productPacking": "Product",
+    "store": "Store",
+    "package": "Package",
+    "level": "Level",
+    "rewardType": "Reward status",
+    "segment": "Segment",
+    "view": "Policy detail",
+    "responsible.distributor": "Distributor paid policy reward?",
+    "param": "policy",
+    "declaration": "Policy declaration",
+    "kpiCode": "KPI code",
+    "kpiType": "KPI type",
+    "kpiStatus": "KPI status",
+    "recent": {
+      "": "Being activated policies",
+      "table.header": {
+        "stt": "No.",
+        "clientId": "Application",
+        "type": "Type",
+        "code": "Code",
+        "name": "Name",
+        "fromDate": "From",
+        "toDate": "To",
+        "status": "Status",
+        "description": "Description"
+      }
+    },
+    "button": {
+      "add": {
+        "detail": "Add level",
+        "variation": "Add variation"
+      },
+      "create": "Create policy"
+    },
+    "table.header": {
+      "stt": "No.",
+      "clientId": "Application",
+      "type": "Type",
+      "menu.type": "Menu type",
+      "code": "Code",
+      "name": "Name",
+      "fromDate": "From",
+      "toDate": "To",
+      "status": "Status",
+      "policyCode": "Policy code",
+      "policyType": "Policy type",
+      "kpiCode": "Kpi code",
+      "kpiType": "Kpi type",
+      "kpiStatus": "Kpi status",
+      "merchantName": "Merchant name",
+      "merchantCode": "Merchant code",
+      "incentiveRateAmount": "Commission",
+      "loyaltyPoint": "Reward",
+      "username": "Username",
+      "rewardStatus": "Status",
+      "value": "Value",
+      "rewardValue": "Reward",
+      "rewardUnit": "Reward unit",
+      "results": "Results",
+      "township": "Township",
+      "level": "Level",
+      "segment": "Segment",
+      "currentLevel": "Current level",
+      "currentSegment": "Current segment",
+      "currentTownship": "Current township"
+    },
+    "status": {
+      "all": "All",
+      "draft": "Draft",
+      "accept": "Accepted",
+      "reject": "Rejected"
+    },
+    "basic": {
+      "info": "Basic information"
+    },
+    "apply.for": {
+      "manufacturer": "Manufacturer",
+      "distributor": "Distributor",
+      "store": "Store",
+      "township": "Township",
+      "product.packing": "Product",
+      "package": "Package",
+      "level": "Level",
+      "segment": "Segment",
+      "time": "Apply time"
+    },
+    "result": {
+      "list.recent": "List of previous results"
+    },
+    "target": "Policy target",
+    "targetValue": "Target value",
+    "details": "Policy details",
+    "add.edit": {
+      "image": "Policy image*",
+      "clientId": "Application",
+      "policyType": "Policy type",
+      "type": "Type",
+      "display.type": "Display type",
+      "code": "Code",
+      "codeAutoCreate": "Code (Auto generate)",
+      "file": "Policy files",
+      "name": "Name",
+      "fromDate": "From",
+      "toDate": "To",
+      "status": "Status",
+      "maximumNumberOfTurns": "Maximum number of turns",
+      "maximumNumberOfTurnsHint": "Not ready for calculate",
+      "description": "Description",
+      "manufacturers": "Manufacturer",
+      "distributors": "Distributor",
+      "townships": "Township",
+      "stores": "Store",
+      "packages": "Choose package",
+      "levels": "Level",
+      "segments": "Segment",
+      "product.packing": "Choose product",
+      "table.header": {
+        "stt": "No.",
+        "manufacturer": "Manufacturer",
+        "manufacturerCode": "Manufacturer code",
+        "manufacturerName": "Manufacturer name",
+        "distributor": "Distributor",
+        "distributorCode": "Distributor code",
+        "distributorName": "Distributor name",
+        "townshipCode": "Township code",
+        "township": "Township",
+        "townshipName": "Township name",
+        "country": "Country",
+        "region": "Region",
+        "district": "District",
+        "storeCode": "Store code",
+        "store": "Store",
+        "storeName": "Store name",
+        "packageCode": "Package code",
+        "package": "Package",
+        "packageName": "Package name",
+        "segmentCode": "Segment code",
+        "segment": "Segment",
+        "segmentName": "Segment name",
+        "levelCode": "Level code",
+        "level": "Level",
+        "levelName": "Level name",
+        "code": "Code",
+        "description": "Description",
+        "productPackingCode": "Package code",
+        "productPacking": "Product packing",
+        "productPackingName": "Name",
+        "minQuantity": "Min quantity",
+        "maxQuantity": "Max quantity",
+        "totalAmount": "Total amount",
+        "totalQuantity": "Total quantity",
+        "orderDate": "Order date",
+        "affectDate": "Affect date",
+        "type": "Type",
+        "fromDate": "From date",
+        "toDate": "To date",
+        "minValue": "Min value",
+        "rewardUnit": "Reward unit",
+        "rewardValue": "Reward value"
+      },
+      "note": {
+        "manufacturer": "*Note: No choose or choose some specified manufacturers",
+        "store": "*Note: No choose or choose some specified stores"
+      },
+      "add": {
+        "confirm": "Do you want to add?",
+        "success": "Add successfully"
+      },
+      "edit": {
+        "confirm": "Do you want to edit?",
+        "success": "Edit successfully"
+      }
+    },
+    "policy": {
+      "all": "All",
+      "param": "policy"
+    },
+    "discount": {
+      "amount": "DISCOUNT_AMOUNT",
+      "percent": "DISCOUNT_PERCENT"
+    },
+    "incentive.rate": {
+      "amount": "INCENTIVE_RATE_AMOUNT",
+      "percent": "INCENTIVE_RATE_PERCENT"
+    },
+    "loyalty.point": {
+      "amount": "LOYALTY_POINT_AMOUNT"
+    },
+    "marketing.fund": {
+      "amount": "MARKETING_FUND_AMOUNT"
+    },
+    "mingalabar.chat": {
+      "amount": "MINGALABAR_CHAT_AMOUNT"
+    },
+    "variation.expired.paid.reward": "This policy was paid",
+    "other": "OTHER",
+    "login": {
+      "loyalty.point": {
+        "amount": "LOGIN_LOYALTY_POINT_AMOUNT"
+      }
+    },
+    "paid.reward": {
+      "wait": "Unpaid",
+      "paid": "Paid"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+<mat-toolbar color="primary" *ngIf="!environment.IS_EMBEDDED">
+  <button mat-icon-button class="open_nav_button" id="menu" *ngIf="messageBoxShow"
+    (click)="navService.appDrawer.opened ? navService.closeNav() : navService.openNav()">
+    <i class="fa fa-bars"></i>
+  </button>
+  <div class="banner">
+    <a href="/"><img class="logo-image" src="/assets/files/logo.png" /></a>
+  </div>
+  <div class="top-menu">
+
+<!--    <a [routerLink]="['/voucher']">Voucher Management</a>-->
+<!--    <a [routerLink]="['/evoucher']">EVoucher</a>-->
+<!--    <a [routerLink]="['/customer-care']">Customer care</a>-->
+
+<!--    <a [routerLink]="['/voucher']">Voucher Management</a>-->
+
+<!--    <a [routerLink]="['/']">Trang chủ</a>-->
+<!--    <a [routerLink]="['/product']">Sản phẩm</a>-->
+<!--    <a [routerLink]="['/news']">Tin tức</a>-->
+<!--    <a [routerLink]="['/jobs']">Tuyển dụng</a>-->
+<!--    <a [routerLink]="['/user-management']">Người dùng</a>-->
+
+  </div>
+  <div class="topbar_content">
+    <div class="theme_select">
+      <span class="theme"><i class="fa fa-paint-brush"></i></span>
+      <mat-select class="mat-select-theme" [(value)]="currentTheme" [ngClass]="currentTheme"
+        (selectionChange)="onChangeTheme($event)">
+        <mat-option value="default">Default</mat-option>
+        <mat-option value="athena">Athena</mat-option>
+        <mat-option value="poseidon">Poseidon</mat-option>
+        <mat-option value="hera">Hera</mat-option>
+        <mat-option value="zeus">Zeus</mat-option>
+      </mat-select>
+    </div>
+
+    <div #userName class="username off" (click)="showUserMenu()">
+      <i class="fa fa-user-circle"></i> <span>{{username}}</span>
+      <div class="usermenu">
+        <a href="javascript:void(0);">Change Password</a>
+        <br>
+        <a (click)="logOut()">Log in/Log out</a>
+      </div>
+    </div>
+
+    <div class="language_select">
+      <mat-select class="mat-select-language" [(value)]="selectedLanguage" [ngClass]="selectedLanguage"
+        (selectionChange)="onChangeLanguage($event)">
+        <ng-container *ngFor="let lang of getLanguages()">
+          <mat-option [value]="lang.code" class="languageOption">
+            <img class="logo" [src]="lang.logo" alt="" />
+          </mat-option>
+        </ng-container>
+      </mat-select>
+    </div>
+  </div>
+</mat-toolbar>

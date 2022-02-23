@@ -1,0 +1,353 @@
+{
+  "customer-care": {
+    "table": {
+      "header": {
+        "number": "STT",
+        "full-name": "Full name",
+        "name_phone" : "Name and phone",
+        "phone": "Phone",
+        "address": "Address",
+        "sex": "Sex",
+        "region": "Region",
+        "district": "District",
+        "township": "Township",
+        "note": "Note",
+        "user": "User",
+        "user-system": "User"
+      }
+    },
+    "heading": {
+      "title": "Voucher management",
+      "addOrEdit": "Add or edit",
+      "detail": "Voucher Detail",
+      "voucher": "Voucher"
+    },
+    "title": {
+      "delete": "Delete",
+      "edit": "Edit",
+      "approve": "Approve",
+      "view": "View detail",
+      "hobbies" : "Hobbies:",
+      "township": "Township:",
+      "other_information": "Other Information:",
+      "district": "District:",
+      "age_range": "Age Range:",
+      "gender": "Gender:",
+      "numberVoucherDistributed": "Voucher distributed",
+      "numberVoucherResidual": "Voucher residual"
+    },
+    "label": {
+      "male" : "Male",
+      "female": "Female",
+      "other": "Other",
+      "title": {
+        "content": "Voucher content:",
+        "from": "From",
+        "to": "To",
+        "valid_time": "Voucher valid time:" ,
+        "quantity": "Quantity:",
+        "category": "Category:",
+        "title" : "Voucher Title:",
+        "business_name":"Business name:",
+        "business_phone":"Business phone:",
+        "status":"Status:"
+      }
+    },
+    "message": {
+      "content": {
+        "delete": "Are you sure want to delete this voucher",
+        "approve": "Are you sure want to approve this voucher"
+      }
+    },
+    "status": {
+      "0": "All",
+      "1": "Pending",
+      "2": "Approved",
+      "3": "Published",
+      "4": "Out of date",
+      "all": "All",
+      "deleted": "Deleted",
+      "approved": "Approved",
+      "published": "Published",
+      "out_of_date": "Out of date",
+      "pending": "Pending",
+      "in_system" : "Trong hệ thống",
+      "outside_system" : "Ngoài hệ thống",
+      "system": {
+        "all": "All",
+        "insystem": "In system",
+        "outsystem": "Out system"
+      }
+    },
+    "type": {
+      "0": "Basic",
+      "1": "Hit"
+    },
+    "sex": {
+      "male": "Male",
+      "female": "Female",
+      "all": "All"
+    },
+    "header": {
+      "businessInfo": "BUSINESS INFO",
+      "voucherDetailInfo": "VOUCHER DETAIL INFO",
+      "voucherDistributeInfo": "VOUCHER DISTRIBUTE INFO"
+    },
+    "add.edit": {
+      "businessName": "Business name",
+      "phone": "Phone number",
+      "title": "Title",
+      "publishDate": "Publish date",
+      "address": "Address",
+      "province": "Province",
+      "district": "District",
+      "fromDate": "From date",
+      "township": "Township",
+      "toDate": "To date",
+      "quantity": "Quantity",
+      "description": "Description",
+      "voucherType": "Voucher type",
+      "content": "Content",
+      "chooseFile": "Choose file",
+      "religion": "Religion",
+      "ageRange": "Age range",
+      "gender": "Gender",
+      "otherInformation": "Other Information",
+      "apply": "Apply",
+      "hobby": "Hobbies",
+      "addFile": "Add file",
+      "ageFrom":"From Age",
+      "ageTo":"To Age",
+      "other-information": "Other Infor"
+    },
+    "button": {
+      "create": "Create",
+      "back": "Back",
+      "save": "Save",
+      "edit": "Edit",
+      "addNew": "Add new voucher",
+      "approve": "Approve",
+      "detail": "Show detail"
+    }
+
+  },
+  "common": {
+    "chosen.distributor.param": "been chosen",
+    "action": "Action",
+    "total": "Total",
+    "attendance": "Customer group",
+    "Choose": "Choose",
+    "variation": "Variation",
+    "discount.variation": "Discount variation",
+    "combo.variation": "Combo variation",
+    "end.date": "End date",
+    "products": "Product",
+    "results": "Total result",
+    "segment": "Segment",
+    "start.date": "Start date",
+    "searchText": "Search text",
+    "location": "Location",
+    "selected.tree.collapse": "Collapse",
+    "selected.tree.expandAll": "Expand",
+    "selected.tree.label": "Selected value",
+    "choose.tree": "Choose in tree",
+    "apply.time": "Apply time",
+    "upload.file": "Import file",
+    "gotopage": "Go to page:",
+    "expand.menu.header.label": "Choose display column",
+    "optional": " (optional)",
+    "hour": "hours",
+    "titleCLosePopup": "Do you want to cancel?",
+    "success": "Voucher created",
+    "deleteSuccess": "Delete voucher successfully",
+    "editVoucherSuccess": "Success",
+    "messageClosePopup": "If you do, you will lose all information typed in",
+    "button": {
+      "header.label": "Action",
+      "import.file": "Drag your file here, or browse",
+      "importImage": "Drag your image here, or browse",
+      "importFile": "Drag your file here, or browse",
+      "export.excel": "Export excel",
+      "approved.paid.reward": "Approve",
+      "download.template": "Download template",
+      "download.error.file": "Download error file",
+      "import.excel": "Import excel",
+      "add.product": "Add product",
+      "create.child.kpi": "Create child KPI",
+      "update.file": "Update KPI file"
+    },
+    "label": {
+      "action": "Action",
+      "product": "Product",
+      "done": "Done",
+      "name": "Name",
+      "advanced.search": {
+        "": "Advanced search",
+        "hide": "Hide advanced search"
+      },
+      "discount.param": "discount",
+      "not.template": "You don’t have a template?",
+      "download.template": "Download file Template",
+      "import.file": "Import your file",
+      "import.file.drag.drop": "Drag or upload your file",
+      "import.file.detail": "Your file needs to follow our template",
+      "product.param": "product",
+      "reward.type": "Reward type",
+      "categories": "Categories",
+      "buy.minimum": "Buy minimum order",
+      "get.maximum.monetary": "Maximum monetary ",
+      "get.product": "Get product",
+      "off.param": "off",
+      "dialog.choose": {
+        "sell": "Choose product(s)",
+        "reward": "Choose add-on product(s)"
+      }
+    },
+    "default": {
+      "success": "Success"
+    },
+    "title": {
+      "add_box": "Divide",
+      "approve": "Approve",
+      "clear": "Remove",
+      "clear.all": "Remove all",
+      "add": "Add",
+      "edit": "Edit",
+      "update": "Update",
+      "save": "Save",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "dashboard": "View",
+      "gr": "Goods received",
+      "pallet": "Update pallet",
+      "picture_as_pdf": "Print as pdf",
+      "compare_arrows": "Update delivery date",
+      "print": "Print",
+      "activate": "Active",
+      "deactivate": "Deactivate",
+      "delivery": "Delivery",
+      "detail": "Detail",
+      "reset.password": "Reset password",
+      "promotion.detail": "Promotion detail",
+      "paid": "Paid reward",
+      "create.from": "Create from this object",
+      "expand.column": "Expand column",
+      "wholesale.price": "Wholesale price"
+    },
+    "input.text": "Input text",
+    "OK": "OK",
+    "Cancel": "Cancel",
+    "Back": "Back",
+    "Yes": "Yes",
+    "confirmDelete": "Do you want to delete this {0}?",
+    "confirmSave": "Do you want to save this {0}?",
+    "confirmApprove": "Do you want to approve this {0}?",
+    "confirmPaid": "Do you want to paid reward for this {0}?",
+    "confirmPrint": "Do you want to print this {0}?",
+    "confirmRejectApprove": "Do you want to reject approve this {0}?",
+    "confirmCreate": "Do you want to create {0}?",
+    "confirmRegister": "Do you want to register this {0}?",
+    "confirmDuplicate": "Do you want to duplicate this {0}?",
+    "reject.reason": "Reject reason",
+    "required": "This field is required",
+    "confirm.not.save": "This {0} will not be saved, are you sure?",
+    "is": {
+      "over-size": "Oversize",
+      "not-accept": "File type not accepted"
+    },
+    "pattern": {
+      "phone": "Phone '{0}' is wrong pattern"
+    },
+    "error": {
+      "": "Something went wrong here",
+      "required": "This field is required",
+      "invalidFromDate": "From date must be greater than current date",
+      "invalidQuantity": "Quantity wrong format",
+      "invalidToDate": "To date must be greater than current date",
+      "toDateMustGreaterThanFromDate": "To date must be greater than  from date",
+      "toDateMustGreaterThanOrEqualFromDate": "To date must be greater than or equal from date",
+      "publishDateMustBeSmallerThanFromDate": "From date must be greater or equal to publish date",
+      "publishDateMustBeSmallerThanToDate": "To date must be greater than from date",
+      "invalidPublishDate": "Publish time must be greater than Current Time at least 1 hour",
+      "requiredFromDate": "This field is required",
+      "requiredToDate": "This field is required",
+      "min": "Must be more than min value",
+      "minlength": "Must be more than min length",
+      "minsize": "Must be more than min size",
+      "max": "Must be less than max value",
+      "maxlength": "Must be less than max length",
+      "maxsize": "Must be less than max size",
+      "date": {
+        "min": "This range time is invalid",
+        "max": "This range time is invalid"
+      },
+      "image": {
+        "width": "The width of image is invalid",
+        "height": "The height of image is invalid",
+        "square": "This image must be square or nearly square",
+        "rectangle": "Image proportion must be: width/height = 2-2.2"
+      }
+    },
+    "no.records.found": "No records found",
+    "code": "Code",
+    "username": "Username",
+    "clientId": "Application",
+    "status": "Status",
+    "tree": {
+      "collapseAll": "Collapse all",
+      "expandAll": "Expand all",
+      "add": "Choose",
+      "remove": "Remove"
+    },
+    "all": "All",
+    "product": {
+      "param": "product",
+      "add.on.param": "add-on product",
+      "add.on": "Add-on product",
+      "packing": {
+        "table.header": {
+          "code": "Code",
+          "name": "Name",
+          "stt": "#",
+          "img": "Image",
+          "sku": "SKU",
+          "mch5Name": "Category",
+          "packingType": "Pack ID",
+          "packingCurrentPrice": "Wholesale price (MMK)",
+          "stock": "Stock",
+          "discount.amount": "Discount (MMK)",
+          "discount.percent": "Discount (%)",
+          "discount": "Discount",
+          "maxSellQuantity": "Quantity",
+          "salePrice": "Sale price (MMK)",
+          "checked": "All"
+        },
+        "list": {
+          "list": "Product list",
+          "empty": "Product list is empty",
+          "not.price.pass.or.distributor.has.not.product.packing": "There are not any satisfying prices during the promotion period or this distributor {0} has not any product packing, product packing list is empty"
+        },
+        "choose": "Choose category",
+        "search.text": "Search text",
+        "search.text.sku": "Input product’s name, SKUs, ...",
+        "selected": "Selected",
+        "main.sell": "Mandated product(s)"
+      }
+    },
+    "region": {
+      "": "Region",
+      "choose": "Region"
+    },
+    "district": {
+      "": "District",
+      "choose": "District"
+    },
+    "township": {
+      "": "Township",
+      "choose": "Township"
+    },
+    "view.all": "View all",
+    "collapse.all": "Collapse"
+  }
+}
+

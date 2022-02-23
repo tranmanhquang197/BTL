@@ -1,0 +1,172 @@
+{
+  "promotion": {
+    "warning.distributor.update": "This action will also remove all levels of the promotion, are you sure? (V)",
+    "delete.level.fail": "Delete all levels fail (V)",
+    "delete.level.done": "Delete all levels success (V)",
+    "view": "Promotion detail (V)",
+    "responsible.distributor": "Distributor paid promotion reward? (V)",
+    "param": "promotion (V)",
+    "table.header": {
+      "stt": "No. (V)",
+      "clientId": "Application (V)",
+      "type": "Type (V)",
+      "code": "Code (V)",
+      "name": "Name (V)",
+      "fromDate": "From (V)",
+      "toDate": "To (V)",
+      "status": "Status"
+    },
+    "status": {
+      "all": "All (V)",
+      "draft": "Draft (V)",
+      "accept": "Accepted (V)",
+      "reject": "Rejected"
+    },
+    "basic": {
+      "info": "Basic info"
+    },
+    "apply.for": {
+      "manufacturer": "Manufacturer (V)",
+      "distributor": "Distributor (V)",
+      "store": "Store (V)",
+      "township": "Township"
+    },
+    "add.edit": {
+      "image": "Promotion image* (V)",
+      "clientId": "Application (V)",
+      "promotionType": "Promotion type (V)",
+      "type": "Type (V)",
+      "display.type": "Display type (V)",
+      "code": "Code (V)",
+      "name": "Name (V)",
+      "fromDate": "From (V)",
+      "toDate": "To (V)",
+      "status": "Status (V)",
+      "maximumNumberOfTurns": "Maximum number of turns (V)",
+      "maximumNumberOfTurnsHint": "Not ready for calculate (V)",
+      "description": "Description (V)",
+      "manufacturers": "Choose a manufacturer (V)",
+      "distributors": "Choose a distributor (V)",
+      "townships": "Choose townships (V)",
+      "stores": "Choose a store (V)",
+      "merchant": "Choose merchants (V)",
+      "productPackingCodes": "Product packing (V)",
+      "flash.sale": "Flash sale range time (V)",
+      "coupon": "Coupon (V)",
+      "apply.for.package": "Apply for package (V)",
+      "table.header": {
+        "manufacturerCode": "Manufacturer code (V)",
+        "manufacturerName": "Manufacturer name (V)",
+        "distributorCode": "Distributor code (V)",
+        "distributorName": "Distributor name (V)",
+        "storeCode": "Store code (V)",
+        "storeName": "Store name (V)",
+        "code": "Level code (V)",
+        "description": "Description (V)",
+        "productPackingCode": "Product packing code (V)",
+        "minQuantity": "Min quantity (V)",
+        "maxQuantity": "Max quantity (V)",
+        "username": "Username (V)",
+        "maximumNumberOfTurns": "Quantity coupon (V)",
+        "townshipCode": "Township code (V)",
+        "townshipName": "Township name (V)",
+        "country": "Country (V)",
+        "region": "Region (V)",
+        "district": "District"
+      },
+      "note": {
+        "manufacturer": "*Note: No choose for all or choose some specified of manufacturers (V)",
+        "store": "*Note: No choose for all or choose some specified of stores"
+      },
+      "add": {
+        "confirm": "Are you sure? (V)",
+        "success": "Add successed"
+      },
+      "edit": {
+        "confirm": "Are you sure? (V)",
+        "success": "Edit successed"
+      },
+      "level.revenue": {
+        "operation": "Operation (V)",
+        "minQuantityBundle": "Min quantity (V)",
+        "maxQuantityBundle": "Max quantity (V)",
+        "minRevenue": "Min revenue (V)",
+        "maxRevenue": "Max revenue"
+      }
+    },
+    "level": {
+      "param": "promotion level (V)",
+      "detail.param": "promotion level detail (V)",
+      "": "Levels (V)",
+      "group": {
+        "code": "Code (V)",
+        "description": "Description (V)",
+        "promotionLevelGroupSell": "Sell group (V)",
+        "promotionLevelGroupReward": "Reward group (V)",
+        "sell": {
+          "minQuantity": "Min quantity (V)",
+          "minAmount": "Min amount (V)",
+          "promotionLevelGroupSell": "Sell group (V)",
+          "table.header": {
+            "productPackingCode": "Product packing code (V)",
+            "quantity": "Quantity (V)",
+            "amount": "Amount"
+          }
+        },
+        "reward": {
+          "maxQuantity": "Max quantity (V)",
+          "maxAmount": "Max amount (V)",
+          "percent": "Percent (V)",
+          "promotionLevelGroupReward": "Reward group (V)",
+          "table.header": {
+            "productPackingCode": "Product packing code (V)",
+            "quantity": "Quantity (V)",
+            "price": "Price (V)",
+            "amount": "Amount"
+          }
+        }
+      }
+    },
+    "promotion": {
+      "all": "All (V)",
+      "line": {
+        "quantity.free.item": "PROMOTION_LINE_QUANTITY_FREEITEM (V)",
+        "quantity.amount": "PROMOTION_LINE_QUANTITY_AMOUNT (V)",
+        "quantity.percent": "PROMOTION_LINE_QUANTITY_PERCENT (V)",
+        "amount.free.item": "PROMOTION_LINE_AMOUNT_FREEITEM (V)",
+        "amount.amount": "PROMOTION_LINE_AMOUNT_AMOUNT (V)",
+        "amount.percent": "PROMOTION_LINE_AMOUNT_PERCENT"
+      },
+      "group": {
+        "quantity.free.item": "PROMOTION_GROUP_QUANTITY_FREEITEM (V)",
+        "quantity.amount": "PROMOTION_GROUP_QUANTITY_AMOUNT (V)",
+        "quantity.percent": "PROMOTION_GROUP_QUANTITY_PERCENT (V)",
+        "amount.free.item": "PROMOTION_GROUP_AMOUNT_FREEITEM (V)",
+        "amount.amount": "PROMOTION_GROUP_AMOUNT_AMOUNT (V)",
+        "amount.percent": "PROMOTION_GROUP_AMOUNT_PERCENT"
+      },
+      "bundle": {
+        "quantity.free.item": "PROMOTION_BUNDLE_QUANTITY_FREEITEM (V)",
+        "quantity.amount": "PROMOTION_BUNDLE_QUANTITY_AMOUNT (V)",
+        "quantity.percent": "PROMOTION_BUNDLE_QUANTITY_PERCENT (V)",
+        "amount.free.item": "PROMOTION_BUNDLE_AMOUNT_FREEITEM (V)",
+        "amount.amount": "PROMOTION_BUNDLE_AMOUNT_AMOUNT (V)",
+        "amount.percent": "PROMOTION_BUNDLE_AMOUNT_PERCENT"
+      },
+      "order": {
+        "quantity.free.item": "PROMOTION_ORDER_QUANTITY_FREEITEM (V)",
+        "quantity.amount": "PROMOTION_ORDER_QUANTITY_AMOUNT (V)",
+        "quantity.percent": "PROMOTION_ORDER_QUANTITY_PERCENT (V)",
+        "amount.free.item": "PROMOTION_ORDER_AMOUNT_FREEITEM (V)",
+        "amount.amount": "PROMOTION_ORDER_AMOUNT_AMOUNT (V)",
+        "amount.percent": "PROMOTION_ORDER_AMOUNT_PERCENT"
+      }
+    },
+    "coupon.username": {
+      "is.existed": "Username is existed (V)",
+      "is.required": "Username is not empty (V)",
+      "pattern": "This value is incorrect format"
+    }
+  }
+}
+

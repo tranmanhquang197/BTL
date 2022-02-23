@@ -1,0 +1,44 @@
+<app-header></app-header>
+<div class = "billing-detail">
+    <div  fxLayout="row wrap"fxFlex="100%" >
+        <div class = "header-title">
+            <h2 style = "margin-left: 241px;">List product Search</h2>
+        </div>
+    </div>
+</div>
+
+<div class  = "list-product-sales" fxLayout="row wrap">
+    <div fxFlex="20%" fxFlex.xs="100%" fxFlex.md="100%" fxFlex.sm="100%" fxLayout="column" *ngFor="let item of listProductSearch"  class="product">
+        <div class="product-item">
+            <div class="product-img">
+                <a routerLink="/product-detail/{{ item.id}}" class=product-link>
+                    <img src="{{ item.product}}">
+                </a>
+            </div>
+        </div>
+        <div class="product-info-wrapper">
+                        <span class="category">
+                            {{ item.productype}}
+                        </span>
+            <div class="title-wrap">
+                <h4>{{ item.name}}</h4>
+            </div>
+            <div class="price-wrap">
+                <p>{{ item.price}}</p>
+            </div>
+            <div class="btn-wrap" fxLayout="row" fxLayoutAlign="center center">
+                <a (click)="addToCart(item)" color="primary">
+                                    <span class="mat-button-wrapper">ADD TO CART
+                                        <mat-icon style="font-size :18px"
+                                                  class="mat-icon-lg mat-icon material-icons notranslate mat-icon-no-color"
+                                                  role="img" aria-hidden="true"
+                                                  data-mat-icon-type="font">shopping_cart
+                                        </mat-icon>
+                                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,131 @@
+.evoucher file-name {
+  text-overflow: ellipsis;
+  width: 15rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.evoucher .upload-button {
+  width: 100% !important;
+}
+
+.evoucher .ng5-slider .ng5-slider-pointer {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  top: -14px;
+  background-color: #00977d !important;
+  z-index: 3;
+  border-radius: 16px;
+}
+
+.evoucher .ng5-slider .ng5-slider-selection {
+  z-index: 2;
+  background-color: #00977d !important;
+  border-radius: 2px;
+}
+
+.evoucher .margin-bottom-10 {
+  margin-top: -10px;
+}
+
+.evoucher .label_width {
+  min-width: 120px !important;
+  max-width: 120px !important;
+}
+
+.evoucher .required-label-outside {
+  color: red;
+}
+
+.evoucher .search-autocomplete .example-form {
+  width: 100%;
+}
+
+.evoucher .search-autocomplete .example-full-width {
+  width: 80%;
+  margin-top: 4px;
+}
+
+
+.default mat-form-field .mat-form-field-infix .mat-form-field-label-wrapper .mat-form-field-label {
+  color: #A5A9B0 !important;
+}
+
+.display-label mat-label {
+  padding: 0 30px !important;
+}
+
+legend {
+  color: #118352 !important;
+  margin-left: 32px !important;
+}
+
+/*.padding-content-label mat-label {*/
+/*  margin-right: 20px !important;*/
+/*}*/
+
+mat-sidenav-container {
+  background-color: #FFFFFF !important;
+}
+
+.datetime .mat-form-field-flex {
+  border: 1px solid #8F9BB3;
+  border-radius: 15px;
+}
+
+.datetime .mat-form-field-underline {
+  display: none;
+}
+
+.datetime .mat-icon-button {
+  margin-right: 0.5rem;
+  font-size: 25px !important;
+}
+
+.datetime .mat-input-element {
+  margin-left: 0.6rem;
+}
+
+.mat-chips-list .mat-chip-list-wrapper {
+  padding-left: 10px;
+}
+
+.example-full-width .mat-form-field-infix {
+  border: 1px solid #8F9BB3 !important;
+  border-radius: 12px !important;
+}
+
+.example-full-width .mat-form-field-underline {
+  display: none;
+}
+
+.border-radio-square .ns-radiobutton .mat-radio-group mat-radio-button.example-radio-button {
+  margin-right: 50px !important;
+}
+
+
+element.style {
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 45%;
+  max-width: 45%;
+}
+
+.row-wrap-padding > [fxLayout=column] {
+  padding: 0 10px 12px !important;
+}
+
+.evoucher ns-input .text_area textarea{
+  min-height: 56px !important;
+  max-height: 190px !important;
+}
+
+.evoucher .from-to-age mat-hint{
+  margin-left: -12px !important; ;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-label {
+  top: 15px !important;
+}

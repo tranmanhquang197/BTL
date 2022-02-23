@@ -1,0 +1,140 @@
+{
+  "distributor.campaign.label": "Distributor campaigns",
+  "campaign": {
+    "add.success": "Campaign created successfully",
+    "edit.success": "Campaign updated successfully",
+    "done_all.success": "Activate success",
+    "clear.success": "Deactivate success",
+    "delete.success": "Delete success",
+    "cancel.success": "Cancel success",
+    "approve.success": "Campaign approved successfully",
+    "reject.success": "Campaign rejected successfully",
+    "param": "campaign",
+    "info": "Campaign info",
+    "setting.table.header.stock": "Stock",
+    "start.create": "Start creating campaign",
+    "id.label": "Campaign ID",
+    "table.header": {
+      "": "",
+      "img": "Image",
+      "maxSellQuantity": "Quantity",
+      "name": "Name",
+      "packingCurrentPrice": "Wholesale price (MMK)",
+      "packingType": "Pack ID",
+      "stt": "#",
+      "stock": "Stock",
+      "mch5Name": "Category",
+      "sku": "SKU",
+      "quantity": "Quantity"
+    },
+    "product.packing": {
+      "main.sell": "Main products",
+      "add.on.reward": "Add on products"
+    },
+    "type": {
+      "": "Type",
+      "all": "All",
+      "detail.choose": "Lorem Ipsum is simply dummy",
+      "label.choose": "Choose campaign type",
+      "PROMOTION_BUNDLE_QUANTITY_AMOUNT": "Combo sale - direct discount - MMK off",
+      "PROMOTION_BUNDLE_QUANTITY_PERCENT": "Combo sale - direct discount - Percentage off",
+      "PROMOTION_BUNDLE_QUANTITY_FREEITEM": "Combo sale - get free item",
+      "PROMOTION_LINE_QUANTITY_AMOUNT": "Item sale direct discount - MMK off",
+      "PROMOTION_LINE_QUANTITY_PERCENT": "Item sale direct discount - Percentage off",
+      "PROMOTION_LINE_QUANTITY_FREEITEM": "Item sale - get free item",
+      "PROMOTION_GROUP_AMOUNT_FREEITEM": "Get free item on order",
+      "PROMOTION_GROUP_AMOUNT_PERCENT": "Discount by order - Percentage off",
+      "PROMOTION_GROUP_AMOUNT_AMOUNT": "Discount by order - MMK off",
+      "PROMOTION_ORDER_AMOUNT_PERCENT": "Coupon - Percentage off",
+      "PROMOTION_ORDER_AMOUNT_AMOUNT": "Coupon - MMK off"
+    },
+    "label": {
+      "coupon": {
+        "id": "Coupon code",
+        "type": "Coupon type",
+        "priority": "Priority",
+        "user.per.customer": "Uses per customer",
+        "before.transaction": "Before a transaction is made",
+        "after.transaction": "After a transaction was made",
+        "setting": "Discount setting",
+        "discount": "Discount amount",
+        "minimum.order": "Minimum order value",
+        "maximumNumberOfTurns": "Quantity",
+        "usesPerCustomer": "Uses per customer",
+        "account": "Account"
+      },
+      "dialog": {
+        "choose": "Choose product(s)",
+        "reject": {
+          "title": "Reject this campaign",
+          "detail": "Do you really want to reject this campaign?"
+        },
+        "approve": {
+          "title": "Approve this campaign",
+          "detail": "Do you really want to approve this campaign?"
+        }
+      },
+      "setting": "Campaign setting",
+      "combo.setting": "Combo setting",
+      "validDate": "Valid date",
+      "distributor": "Distributor",
+      "description": "Description",
+      "name": "Campaign name",
+      "campaignType": "Campaign type",
+      "status": "Status",
+      "validTime": "Valid time",
+      "productName": "Product name",
+      "packId": "Pack ID",
+      "banner": "Image",
+      "attendance": "Customer group",
+      "segment": "Segment",
+      "id": "Campaign ID",
+      "id.auto.create": "Campaign ID(auto create)",
+      "product": "Campaign product",
+      "buy": "Buy",
+      "reward.maximum.money": "Maximum monetary value",
+      "get": "Get",
+      "reward": {
+        "detail": "Customers get discount from the total value of  product(s) they buy from the list above",
+        "discount": "discount",
+        "get": "Get",
+        "maximum.money": "Maximum monetary value"
+      },
+      "sell.min.order": "MMK minimum order",
+      "retailer": "Retailer",
+      "end.user": "End user",
+      "variation": "Campaign variation ",
+      "off.param": "off",
+      "order.reward.detail": "Add product(s) you want to appear in this campaign",
+      "main.product": "Main product"
+    },
+    "button": {
+      "viewDetail": "View detail",
+      "add": {
+        "product": "Add product",
+        "free.item": "Add free item",
+        "add.on.product": "Add add-on product",
+        "main.product": "Add main product",
+        "discount.variation": "Add discount variation"
+      },
+      "create": "Create campaign",
+      "edit": "Edit campaign",
+      "choose.add.on.product": "Choose add-on product"
+    },
+    "status": {
+      "_": "All",
+      "accepted": "Approved",
+      "ongoing": "Ongoing",
+      "closed": "Closed",
+      "draft": "Pending",
+      "rejected": "Rejected"
+    },
+    "title": {
+      "confirm": {
+        "township.change": "Do you want to change location?",
+        "date.change": "Do you want to change valid date?"
+      },
+      "product.packing.reset": "This product list will be reset"
+    }
+  }
+}

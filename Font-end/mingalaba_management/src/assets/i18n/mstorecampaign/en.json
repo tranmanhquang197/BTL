@@ -1,0 +1,156 @@
+{
+  "mstore-campaign": {
+    "add.success": "mStore campaign created successfully",
+    "edit.success": "mStore campaign updated successfully",
+    "registration": {
+      "param": "registration",
+      "add.success": "Distributor registered this mstore campaign successfully",
+      "edit.success": "Distributor registration updated successfully"
+    },
+    "done_all.success": "Activate success",
+    "clear.success": "Deactivate success",
+    "delete.success": "Delete success",
+    "cancel.success": "Cancel success",
+    "approve.success": "mStore campaign approved successfully",
+    "reject.success": "mStore campaign rejected successfully",
+    "param": "mstore campaign",
+    "add.confirm": "Do you want to add this campaign?",
+    "edit.confirm": "Do you want to modify this campaign?",
+    "setting.time-slot": "Timeslot setting",
+    "type": {
+      "flash": {
+        "name": "Start creating campaign",
+        "title": "Flashsale",
+        "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "img": ""
+      },
+      "parity": {
+        "name": "Start creating campaign",
+        "title": "Parity",
+        "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "img": ""
+      }
+    },
+    "title": {
+      "chooseCampaign": "Choose campaign type",
+      "campaignInfo": "Campaign info",
+      "campaignSetting": "Campaign setting",
+      "description": "Description",
+      "condition": "Condition",
+      "search": "mStore campaigns",
+      "registeredCampaign": "Registered campaign",
+      "availableCampaign": "Available campaign",
+      "approveDistributor": "Approve this distributor",
+      "timeSlot": "Time slots",
+      "distributorProduct": "Distributor’s product",
+      "editCampaign": "Edit registration",
+      "registrationInformation": "Registration information"
+    },
+    "label": {
+      "dialog": {
+        "choose": "Choose product(s)",
+        "reject" :{
+          "distributor": {
+            "title": "Reject this distributor",
+            "detail": "Do you really want to reject this distributor?"
+          },
+          "title": "Reject this mStore campaign",
+          "detail": "Do you really want to reject this mStore campaign?"
+        },
+        "approve" :{
+          "distributor": {
+            "title": "Approve this distributor",
+            "detail": "Do you really want to approve this distributor?"
+          },
+          "title": "Approve this mStore campaign",
+          "detail": "Do you really want to approve this mStore campaign?"
+        }
+      },
+      "banner": "Image",
+      "termService": "Terms of services",
+      "code": "Code",
+      "name": "Name",
+      "description": "Campaign description",
+      "id": "Campaign ID",
+      "validTime": "Valid time",
+      "registrationTime": "Registation time",
+      "deliveryTime": "Delivery time required",
+      "minQuantity": "Minimum quantity of each package ID to be sold",
+      "minPackage": "Package ID minimum stock",
+      "minPercent": "Minimum percentage off",
+      "parityLevel": "Parity level",
+      "category": "Categories",
+      "distributor": "Distributor",
+      "registeredTime": "Registered time",
+      "type": "Type",
+      "startDate": "Campaign start date",
+      "endDate": "Campaign end date",
+      "regStartDate": "Registation start date",
+      "regEndDate": "Registation end date",
+      "owner": "Owner",
+      "FLASH_SALE": "Flashsale",
+      "PROMOTION_LINE_QUANTITY_PARITY": "Parity",
+      "setting.date.flashSale": "Date",
+      "setting.time.slot": "Time slots",
+      "reward.type.percent": "Percentage off",
+      "reward.type.amount": "Direct discount",
+      "reward.type": "Discount type",
+      "setup": "Set up campaign",
+      "reject.reason": "Reject reason"
+    },
+    "placeholder": {
+      "banner": "Image",
+      "termService": "Terms of services",
+      "code": "Code",
+      "name": "Name",
+      "description": "Campaign description",
+      "id": "Campaign ID",
+      "validTime": "Valid time",
+      "registrationTime": "Registation time",
+      "deliveryTime": "Delivery time required",
+      "minQuantity": "Minimum quantity of each package ID to be sold",
+      "minPackage": "Package ID minimum stock",
+      "minPercent": "Minimum percentage off",
+      "parityLevel": "Parity level"
+    },
+    "button": {
+      "createCampaign": "Create campaign",
+      "editCampaign": "Edit campaign",
+      "updateCampaign": "Update campaign",
+      "edit.registation": "Edit registation",
+      "registation": "Registation",
+      "cancel.registation": "Cancel registation"
+    },
+    "status": {
+      "_": "All",
+      "accepted": "Approved",
+      "ongoing": "Ongoing",
+      "closed": "Closed",
+      "draft": "Pending",
+      "rejected": "Rejected"
+    },
+    "table": {
+      "header": {
+        "stt": "#",
+        "distributor": "Distributor",
+        "numberOfPackId": "Number of Pack ID",
+        "status": "Status",
+        "rejectReason": "Reason"
+      }
+    },
+    "message": {
+      "approveMessage": "Do you really want to approve this distributor?",
+      "approveTitle": "Approve this distributor",
+      "registation": "registation",
+      "success": {
+        "inactivated": "Inactivated",
+        "created": "Created",
+        "updated": "Updated",
+        "approve": "Approve successful"
+      }
+    },
+    "validation": {
+      "some.product.not.available.parity": "Some product packing are not enough condition of parity campaign!"
+    }
+  }
+}

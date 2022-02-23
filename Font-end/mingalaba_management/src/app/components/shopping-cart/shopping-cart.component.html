@@ -1,0 +1,89 @@
+<app-header [add]="lenthShoppingCart"></app-header>
+<div class = "shopping-cart">
+    <div class="mat-elevation-z8"  fxLayout="row wrap"fxFlex="100%" >
+        <table mat-table [dataSource]="dataSource">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="product">
+                <th mat-header-cell *matHeaderCellDef> Product </th>
+                <td mat-cell *matCellDef="let element">
+<!--                    {{element.product}}-->
+                    <img style = "width:100px;height: 100px;object-fit: cover;padding: 5px 0 5px 0px;"  src="{{ element.product }}">
+                </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="price">
+                <th mat-header-cell *matHeaderCellDef> Price </th>
+                <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="quantity">
+                <th mat-header-cell *matHeaderCellDef> Quantity </th>
+                <td mat-cell *matCellDef="let element;let i = index">
+<!--                    {{element.quantity}} -->
+                    <div>
+                        <div fxLayout="row" >
+                            <button (click)="minus(i)"  class="mat-focus-indicator mat-icon-button mat-button-base" mat-icon-button="" mattooltip="Remove">
+                                <span class="mat-button-wrapper">
+                                    <mat-icon  class="mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true" data-mat-icon-type="font">remove</mat-icon>
+                                </span>
+                                <span class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></span>
+                                <span class="mat-button-focus-overlay"></span>
+                            </button>
+                            <input   [value]="element?.quantity" class="form-control input-number ng-untouched ng-pristine" disabled="" name="quantity" type="text">
+                            <button (click)="plus(i)"  class="mat-focus-indicator mat-icon-button mat-button-base" mat-icon-button="" mattooltip="Add">
+                                <span class="mat-button-wrapper">
+                                    <mat-icon  class="mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true" data-mat-icon-type="font">add</mat-icon></span>
+                                <span class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></span>
+                                <span class="mat-button-focus-overlay"></span>
+                            </button>
+                        </div>
+                    </div>
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="total">
+                <th mat-header-cell *matHeaderCellDef> Total </th>
+                <td mat-cell *matCellDef="let element"> {{element.total}} </td>
+            </ng-container>
+            <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef> Action </th>
+                <td mat-cell *matCellDef="let element;let i = index">
+                    <div (click)="delete(i)">
+                        <mat-icon  class="mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true" data-mat-icon-type="font">close</mat-icon>
+                    </div>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <div style = "padding: 15px 0 15px 0;" fxFlex="100" fxLayout="row" >
+            <div fxFlex="50" fxLayout="row" fxLayoutAlign="start center">
+                <button routerLink="/billing-detail"  class="mat-focus-indicator mat-raised-button mat-button-base mat-primary"
+                        color="primary">
+                    Order
+                </button>
+            </div>
+            <div fxFlex="50" fxLayout="row" >
+                <div style = "margin-left: 200px;">
+                    <span style = "font-size: 20px;font-weight: 600;">Total : </span>
+                    <span style = "margin-left: 19px;font-size: 20px;font-weight: 600;color: red;">{{ total }} VND</span>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<app-footer></app-footer>

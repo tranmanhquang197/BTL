@@ -1,0 +1,87 @@
+<div class='searchFormGroup users-report'>
+    <form [formGroup]='searchForm' (ngSubmit)='search()' class='acbox'
+          style='box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.06);'>
+        <div fxLayout='row wrap' fxLayoutAlign="space-between" class='row-wrap-padding'>
+            <div class="form_title">{{'Order' |translate}}</div>
+            <ns-input formControlName='content'
+                      [placeholder]="'Name'"
+                      [isLabelOutside]='true' fxLayout='column' fxFlex='45%' fxFlex.lt-md='100%'>
+            </ns-input>
+            <ns-multi-select-autocomplete [isLabelOutside]='true'
+                                          formControlName='status'
+                                          [options]='statusOptions'
+                                          [multiple]='false'
+                                          fxLayout='column' fxFlex='45%' fxFlex.lt-md='100%'
+                                          [placeholder]="'report-users.heading.status'">
+            </ns-multi-select-autocomplete>
+            <div fxLayout='row' fxFlex='45%'
+                 fxFlex.lt-md='100%' style='padding: 0 10px'>
+                <p fxLayout='column' style='max-width: 165px; min-width: 165px'>Create date</p>
+                <ns-date-picker name='publish_date_from'
+                                formControlName='publish_date_from'
+                                [placeholder]="'dd/MM/yyyy'"
+                                [isLabelOutside]='true'
+                                class='label-pos'
+                                fxLayout='column' fxFlex='50%'
+                                fxFlex.xs='100%' fxFlex.sm='50%' fxFlex.md='50%' fxFlex.lg='50%'
+                ></ns-date-picker>
+                <p style='padding: 0 20px; margin-top: 11px;'>-</p>
+                <ns-date-picker name='publish_date_to'
+                                formControlName='publish_date_to'
+                                class='label-pos'
+                                [placeholder]="'dd/MM/yyyy'"
+                                [isLabelOutside]='true'
+                                fxLayout='column' fxFlex='50%'
+                                fxFlex.xs='100%' fxFlex.sm='50%' fxFlex.md='50%' fxFlex.lg='50%'
+                ></ns-date-picker>
+            </div>
+
+            <ns-multi-select-autocomplete [isLabelOutside]='true'
+                                          formControlName='reportType'
+                                          [options]='typeOptions'
+                                          [multiple]='false'
+                                          fxLayout='column' fxFlex='45%' fxFlex.lt-md='100%'
+                                          [placeholder]="'Price'">
+            </ns-multi-select-autocomplete>
+
+            <div fxLayout='column' fxFlex='100%'>
+                <div fxLayout='row wrap' fxLayoutAlign="space-between">
+                    <div fxFlex="50%">
+                        <!--            background-color: #00977D;-->
+                        <!--            color: white;-->
+                    </div>
+                    <div fxFlex="50%">
+                        <div style="float: right">
+                            <button mat-button type='submit' class='primary'>
+                                {{'btnSearch'|translate}}
+                            </button>
+                            <button mat-button type='button' class='secondary outline' (click)='resetSearchFormValue()'>
+                                {{'btnReset' |translate}}
+                            </button>
+                        </div>
+
+                        <!--          "btnUpload": "Upload excel",-->
+                        <!--          "btnExportTemplate": "Export template",-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class='result-area margin-bottom-20' fxLayout="row">
+              <div fxFlex="50%">
+<!--                  <h3 class='margin-0'>{{('total.results'| translate) }} {{paging.totalElements}}</h3>-->
+                  <h3 class='margin-0'>{{('total.results'| translate) }} {{paging.totalElements}} </h3>
+              </div>
+    </div>
+
+    <div class='acbox' style='box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.06);'>
+        <ns-table [columns]='columns' [buttons]='buttons' *ngIf='searchForm.valid'
+                  [paging]='paging' (pagingChange)='pagingChange($event)'
+                  [moduleName]='moduleName' [results]='results'
+                  (onRowClickAction)="onRowClickAction($event)"
+                  (onRowClickAction)="onRowClickAction($event)"
+        >
+        </ns-table>
+    </div>
+</div>
+

@@ -1,0 +1,53 @@
+{
+  "user-management": {
+    "table": {
+      "header": {
+        "number": "No.",
+        "code": "Code",
+        "userName": "Username",
+        "displayName": "Display name",
+        "avatar": "Avatar",
+        "birthday": "Birthday",
+        "sex": "Sex",
+        "dateBecomeHit": "Date become hit",
+        "IDcard": "ID card",
+        "status": "Status",
+        "action": "Action",
+        "region": "Region",
+        "district": "District",
+        "village": "Village",
+        "ward": "Ward",
+        "add": "Add",
+        "phoneNumber": "Phone number",
+        "typeUser": "Type user",
+        "createdAt": "Created date"
+      }
+    },
+    "heading": {
+      "title": "User management"
+    },
+    "title": {
+      "inactive": "Inactive",
+      "reactivate": "Reactivate",
+      "resetPass": "Reset password"
+    },
+    "message": {
+      "content": {
+        "active": "Are you sure want to reactivate this user",
+        "inactive": "Are you sure want to inactive this user"
+      }
+    },
+    "status": {
+      "0": "Inactive",
+      "1": "Active"
+    },
+    "type": {
+      "0": "Basic",
+      "1": "Hit"
+    },
+    "sex": {
+      "1": "Male",
+      "2": "Female"
+    }
+  }
+}

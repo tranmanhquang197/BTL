@@ -1,0 +1,55 @@
+<div class="acbox">
+  <div fxLayout="row wrap" class="row-wrap-padding" *ngIf="(data$ | async) as data">
+    <div fxLayout="column" fxFlex="40%">
+      <app-base-header [status]="data?.active"
+                         [showClose]="false"
+                         [title]="'Jonathan  ( Nick Name )'">
+      </app-base-header>
+      <div>
+        <ns-image-view [src]="data?.avatar">
+        </ns-image-view>
+      </div>
+    </div>
+    <div fxLayout="column" fxFlex="20%">
+    </div>
+    <div fxLayout="column" fxFlex="40%">
+      <div class="form_title"></div>
+      <app-base-header [status]="(data?.user_type + 2).toString()"
+                       [showClose]="false"
+                       [title]="'User information'">
+      </app-base-header>
+      <div fxLayout="row wrap">
+        <ns-input-view [label]="'user-management.table.header.displayName'"
+                       [text]="data.display_name"
+                       fxLayout="column" fxFlex="50%"
+                       fxFlex.lt-md="100%">
+        </ns-input-view>
+        <ns-input-view [label]="'user-management.table.header.phoneNumber'"
+                       [text]="data.phoneNumber"
+                       fxLayout="column" fxFlex="50%"
+                       fxFlex.lt-md="100%">
+        </ns-input-view>
+        <ns-input-view [label]="'user-management.table.header.birthday'"
+                       [text]="data.birthday"
+                       fxLayout="column" fxFlex="50%"
+                       fxFlex.lt-md="100%">
+        </ns-input-view>
+        <ns-input-view [label]="'user-management.table.header.sex'"
+                       [text]="('user-management.sex.' + data.sex) | translate"
+                       fxLayout="column" fxFlex="50%"
+                       fxFlex.lt-md="100%">
+        </ns-input-view>
+        <ns-input-view [label]="'user-management.table.header.createdAt'"
+                       [text]="data.createdAt?.substring(0, 10)"
+                       fxLayout="column" fxFlex="50%"
+                       fxFlex.lt-md="100%">
+        </ns-input-view>
+        <ns-input-view [label]="'user-management.table.header.dateBecomeHit'"
+                       [text]="data.dateBecomeHit?.substring(0, 10)"
+                       fxLayout="column" fxFlex="50%"
+                       fxFlex.lt-md="100%">
+        </ns-input-view>
+      </div>
+    </div>
+  </div>
+</div>

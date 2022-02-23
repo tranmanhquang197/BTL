@@ -1,0 +1,15 @@
+<div style="height:99%; width: 99%;" id="powerbiFrame"
+     [ngClass]="{'hidePowerBI': loadPowerBIFail}"
+></div>
+<div class="reload" style="height:100%; width: 100%;"
+     fxLayout fxLayoutAlign="center center"
+     *ngIf="loadPowerBIFail">
+  <button mat-icon-button color="primary" (click)="reloadPowerBI()"
+          style="width: 3rem; height: 3rem;"
+          fxLayout fxLayoutAlign="center center">
+    <mat-icon style="width: 3rem; height: 3rem;font-size: 3rem;"
+              fxLayout fxLayoutAlign="center center">autorenew
+    </mat-icon>
+  </button>
+</div>
+

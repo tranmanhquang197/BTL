@@ -1,0 +1,44 @@
+<div class="login">
+  <mat-card>
+    <div fxLayout="row">
+      <div fxFlex="50%" class = "login-left" fxLayout="column" fxLayoutAlign="center center">
+        <img style = "width: 150px;height:150px" src="/assets/files/logo.png"/>
+        <mat-card-content>
+          <form [formGroup]="form" (ngSubmit)="submit()">
+            <p>
+              <mat-form-field>
+                <input type="text" matInput placeholder="{{'login.username'|translate}}" formControlName="username" height="69">
+              </mat-form-field>
+            </p>
+
+            <p>
+              <mat-form-field>
+                <input type="password" matInput placeholder="{{'login.password'|translate}}" formControlName="password">
+              </mat-form-field>
+            </p>
+            <p *ngIf = "register">
+              <mat-form-field>
+                <input type="password" matInput placeholder="{{'Confirm password'|translate}}" formControlName="confirmPassword">
+              </mat-form-field>
+            </p>
+
+            <p *ngIf="error" class="error">
+              {{ error }}
+            </p>
+
+              <button *ngIf = "!register" type="submit" mat-button ><i class="fa fa-sign-in"></i> {{'login.login'|translate}}</button>
+              <button *ngIf = "register" type="submit" mat-button ><i class="fa fa-sign-in"></i> {{'Register'|translate}}</button>
+            <div style = "margin-top: 60px;margin-left: 39%;">
+              <a *ngIf = "!register" (click) = "registers(true)">Register</a>
+              <a *ngIf = "register" (click) = "registers(false)">Login</a>
+            </div>
+
+          </form>
+        </mat-card-content>
+      </div>
+      <div fxFlex="50%">
+
+      </div>
+    </div>
+  </mat-card>
+</div>

@@ -1,0 +1,115 @@
+
+.login {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  //background: url(../../assets/files/background-login.png);
+  background: linear-gradient(to left, #1f1f70 49%, #cce4ff 49%);
+
+  .login-left{
+    margin-top: 5%;
+  }
+
+  .mat-card {
+    background: url(../../assets/files/background-login.png);
+    width: 1015px;
+    height: 540px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 5px 5px 50px 5px;
+    color: black !important;
+    margin: 0 !important;
+    background-color: white !important;
+    border-radius: 20px !important;
+    box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12) !important;
+  }
+
+  .mat-card-content {
+    margin: 20px;
+  }
+
+  .mat-card-title {
+    background-color: white;
+    color: white;
+    padding: 20px 0;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    display: flex;
+    place-content: center;
+    align-items: center;
+
+    img {
+      width: 100px;
+      margin-right: 10px;
+    }
+
+    i {
+      margin-right: 5px;
+    }
+  }
+
+  input {
+
+  }
+
+  p {
+    margin: 10px 0 !important;
+  }
+
+  button {
+    position: absolute !important;
+    left: -50%;
+    right: 0;
+    margin: auto !important;
+    background-color: #1f1f70;
+    color: white;
+  }
+
+  .mat-form-field-appearance-legacy {
+    .mat-form-field-label {
+      color: #795548 !important;
+    }
+
+    .mat-form-field-underline {
+      background-color: #009688 !important;
+    }
+  }
+
+  :host {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
+  }
+
+  .mat-form-field {
+    width: 100%;
+    min-width: 300px;
+  }
+
+  mat-card-title,
+  mat-card-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .error {
+    color: #f44336;
+    background-color: transparent;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .button {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+}
+
+

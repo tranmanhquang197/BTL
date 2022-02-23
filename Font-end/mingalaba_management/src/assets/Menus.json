@@ -1,0 +1,42 @@
+[
+  {
+    "displayName": "menu.dashboard",
+    "iconName": "fa fa-chart-pie-alt",
+    "route": "dashboard",
+    "roleMenu": "DASHBOARD"
+  },
+  {
+    "displayName": "menu.voucher",
+    "iconName": "fad fa-ticket-alt",
+    "route": "voucher",
+    "roleMenu": "VOUCHER"
+  },
+  {
+    "displayName": "menu.evoucher",
+    "iconName": "fad fa-ticket-alt",
+    "route": "evoucher",
+    "roleMenu": "EVOUCHER"
+  },
+  {
+    "displayName": "menu.customer-care",
+    "iconName": "fas fa-child",
+    "roleMenu": "CUSTOMER_CARE",
+    "route": "customer-care"
+  },
+  {
+    "displayName": "menu.users",
+    "iconName": "fas fa-child",
+    "route": "users",
+    "roleMenu": "CHAT_ADMIN"
+  },
+  {
+    "displayName": "Report users",
+    "iconName": "fas fa-user-times",
+    "route": "report-users"
+  },
+  {
+    "displayName": "menu.logout",
+    "iconName": "fa fa-power-off",
+    "route": "logout"
+  }
+]

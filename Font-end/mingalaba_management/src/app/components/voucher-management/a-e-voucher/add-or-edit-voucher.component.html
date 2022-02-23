@@ -1,0 +1,98 @@
+<form [formGroup]='addEditForm' class='form voucher' style='margin: 0px 1rem'>
+    <!--  BUSINESS INFO-->
+    <fieldset style='box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08) !important;'>
+        <div fxLayout='row wrap' class='row-wrap-padding' fxLayoutAlign='center start'>
+            <legend fxLayout='row' fxFlex='100%'>{{'Product Infomation' | translate}}</legend>
+            <p fxLayout='row' fxFlex='100%'></p>
+
+            <div fxLayout='row' style = "align-items: center;justify-content: center;" fxFlexAlign="center center" fxFlex='100%' fxFlex.lt-md='100%' class="clearfix">
+                <div style = "max-width: 125px;min-width: 125px;margin-left: 80px;">
+                    <span>Upload Image  </span>
+                </div>
+                <nz-upload
+                        nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+                        nzListType="picture-card"
+                        [(nzFileList)]="fileList"
+                        [nzShowButton]="fileList.length < 3"
+                        [nzCustomRequest]="customUploadReq"
+                        [nzHeaders] = "setMediaUploadHeaders"
+                        [nzName]="'file'"
+                >
+                    <div>
+                        <i nz-icon nzType="plus"></i>
+                        <div style="margin-top: 8px">Upload </div>
+                    </div>
+                </nz-upload>
+            </div>
+
+
+            <ns-input  fxLayout='column' fxFlex='45%' fxFlex.lt-md='100%'
+                      style='padding-top: 10px'
+                      class='padding-content-label'
+                      formControlName='name'
+                      [required]='true'
+                      [isLabelOutside]='true'
+                      [placeholder]="'Name'">
+            </ns-input>
+<!--            <ns-multi-select-autocomplete-->
+<!--                    [multiple]="true"-->
+<!--                    [isLabelOutside]='true'-->
+<!--                    formControlName="productType"-->
+<!--                    [required]='true'-->
+<!--                    (selectionChange)="onChangeCustomers($event)"-->
+<!--                    [options]="customersSelect"-->
+<!--                    [placeholder]="'Product type'" fxLayout="column" fxFlex="45%"-->
+<!--                    fxFlex.lt-md='100%'>-->
+<!--            </ns-multi-select-autocomplete>-->
+            <ns-multi-select-autocomplete
+                    [multiple]="false"
+                    [isLabelOutside]='true'
+                    formControlName="productType"
+                    [required]='true'
+                    [options]="typeOptions"
+                    [placeholder]="'Product type'" fxLayout="column" fxFlex="45%"
+                    fxFlex.lt-md='100%'>
+            </ns-multi-select-autocomplete>
+            <ns-input name='Name' fxLayout='column' fxFlex='45%' fxFlex.lt-md='100%'
+                      style='padding-top: 10px'
+                      class='padding-content-label'
+                      formControlName='quantity'
+                      [patternFilter]="'^[0-9]*$'"
+                      [required]='true'
+                      [isLabelOutside]='true'
+                      [placeholder]="'Quantity'">
+            </ns-input>
+            <ns-input name='Name' fxLayout='column' fxFlex='45%' fxFlex.lt-md='100%'
+                      style='padding-top: 10px'
+                      class='padding-content-label'
+                      formControlName='price'
+                      [patternFilter]="'^[0-9]*$'"
+                      [required]='true'
+                      [isLabelOutside]='true'
+                      [placeholder]="'Price'">
+            </ns-input>
+
+
+            <div fxFlex="45%">
+
+            </div>
+            <!--/      Business Name-->
+        </div>
+    </fieldset>
+
+    <div class='acbox_footer btn-sec no-margin'
+         style='  position: fixed; bottom: 0; right: 3px; display: flex; justify-content: center'>
+        <div>
+            <button mat-button
+                    (click)='onSave()'
+                    style='width: 350px'
+                    [disabled]='addEditForm.invalid '
+                    class='primary'>
+                {{(isEdit ? 'voucher-management.button.save' : 'voucher-management.button.create') | translate}}
+            </button>
+        </div>
+    </div>
+    <!--/  Button Footer-->
+</form>
+
+
